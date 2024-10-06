@@ -34,7 +34,7 @@ public class InitializedData implements ServletContextListener {
                 .birthDate(LocalDate.of(2000, 10, 10))
                 .password("adminadmin")
                 .roles(List.of(UserRoles.ADMIN, UserRoles.USER))
-                .portrait(getResourceAsByteArray("../avatars/green.jpg"))
+                .portrait(getResourceAsByteArray("../avatars/Admin.jpg"))
                 .build();
 
         User radek = User.builder()
@@ -45,7 +45,7 @@ public class InitializedData implements ServletContextListener {
                 .birthDate(LocalDate.of(2003, 1, 20))
                 .password("useruser")
                 .roles(List.of(UserRoles.ADMIN))
-                .portrait(getResourceAsByteArray("../avatars/blue.jpg"))
+                .portrait(getResourceAsByteArray("../avatars/Hunrax.jpg"))
                 .build();
 
         User anonim = User.builder()
@@ -56,7 +56,7 @@ public class InitializedData implements ServletContextListener {
                 .birthDate(LocalDate.of(1212, 12, 12))
                 .password("AnonimowyAnonim")
                 .roles(List.of(UserRoles.USER))
-                .portrait(getResourceAsByteArray("../avatars/red.jpg"))
+                .portrait(getResourceAsByteArray("../avatars/Anonim.jpg"))
                 .build();
 
         User studentPG = User.builder()
@@ -67,7 +67,7 @@ public class InitializedData implements ServletContextListener {
                 .birthDate(LocalDate.of(2001, 6, 16))
                 .password("Pawel123")
                 .roles(List.of(UserRoles.USER))
-                .portrait(getResourceAsByteArray("../avatars/blackscreen.jpg"))
+                .portrait(getResourceAsByteArray("../avatars/StudentPG.jpg"))
                 .build();
 
         User janusz = User.builder()
@@ -78,7 +78,7 @@ public class InitializedData implements ServletContextListener {
                 .birthDate(LocalDate.of(1975, 4, 15))
                 .password("PolskaGurom")
                 .roles(List.of(UserRoles.USER))
-                .portrait(getResourceAsByteArray("../avatars/blackscreen.jpg"))
+                .portrait(getResourceAsByteArray("../avatars/JanuszPL.jpg"))
                 .build();
 
         userService.create(admin);
