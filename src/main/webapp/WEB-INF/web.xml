@@ -4,6 +4,11 @@
          xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
          version="6.0"
          metadata-complete="false">
+    
+    <context-param>
+        <param-name>portraitPath</param-name>
+        <param-value>userPortrait/</param-value>
+    </context-param>
 
     <listener>
         <listener-class>pg.eti.jee.configuration.listener.CreateDataSource</listener-class>

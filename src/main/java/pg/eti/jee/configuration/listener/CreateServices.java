@@ -9,6 +9,10 @@ import pg.eti.jee.user.repository.api.UserRepository;
 import pg.eti.jee.user.repository.memory.UserInMemoryRepository;
 import pg.eti.jee.user.service.UserService;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+
 @WebListener
 public class CreateServices implements ServletContextListener {
 
@@ -18,7 +22,14 @@ public class CreateServices implements ServletContextListener {
 
         UserRepository userRepository = new UserInMemoryRepository(dataSource);
 
-        event.getServletContext().setAttribute("userService", new UserService(userRepository, new Pbkdf2PasswordHash()));
+        String portraitPath = event.getServletContext().getInitParameter("portraitPath");
+
+        try {
+            Files.createDirectories(Path.of(portraitPath));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        event.getServletContext().setAttribute("userService", new UserService(userRepository, new Pbkdf2PasswordHash(), portraitPath));
     }
 
 }

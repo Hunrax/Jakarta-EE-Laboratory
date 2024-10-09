@@ -39,5 +39,5 @@ public class User implements Serializable {
 
     @ToString.Exclude
     @EqualsAndHashCode.Exclude
-    private byte[] portrait;
+    private String portrait;
 }

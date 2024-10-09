@@ -1,11 +1,14 @@
 package pg.eti.jee.user.service;
 
+import pg.eti.jee.controller.servlet.exception.NotFoundException;
 import pg.eti.jee.crypto.component.Pbkdf2PasswordHash;
 import pg.eti.jee.user.entity.User;
 import pg.eti.jee.user.repository.api.UserRepository;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
@@ -15,9 +18,12 @@ public class UserService {
 
     private final Pbkdf2PasswordHash passwordHash;
 
-    public UserService(UserRepository repository, Pbkdf2PasswordHash passwordHash) {
+    private final String portraitPath;
+
+    public UserService(UserRepository repository, Pbkdf2PasswordHash passwordHash, String portraitPath) {
         this.repository = repository;
         this.passwordHash = passwordHash;
+        this.portraitPath = portraitPath;
     }
 
     public Optional<User> find(UUID id) {
@@ -45,17 +51,39 @@ public class UserService {
 
     public void updatePortrait(UUID id, InputStream is) {
         repository.find(id).ifPresent(user -> {
+            String portraitFullPath = portraitPath + user.getId() + ".jpg";
             try {
-                user.setPortrait(is.readAllBytes());
+                Files.write(Path.of(portraitFullPath), is.readAllBytes());
+                user.setPortrait(portraitFullPath);
                 repository.update(user);
-            } catch (IOException ex) {
-                throw new IllegalStateException(ex);
+            }
+            catch (IOException e) {
+                throw new RuntimeException(e);
             }
         });
     }
 
+    public byte[] getPortrait(UUID id){
+        Optional<User> u = repository.find(id);
+        if(u.isPresent()){
+            try{
+                return Files.readAllBytes(Path.of(u.get().getPortrait()));
+            }
+            catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        }
+        throw new NotFoundException();
+    }
+
     public void deletePortrait(UUID id) {
         repository.find(id).ifPresent(user -> {
+            try {
+                Files.delete(Path.of(user.getPortrait()));
+            }
+            catch (IOException e) {
+                throw new RuntimeException(e);
+            }
             user.setPortrait(null);
             repository.update(user);
         });

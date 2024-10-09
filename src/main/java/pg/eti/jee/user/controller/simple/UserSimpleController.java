@@ -12,6 +12,7 @@ import pg.eti.jee.controller.servlet.exception.NotFoundException;
 import pg.eti.jee.controller.servlet.exception.BadRequestException;
 
 import java.io.InputStream;
+import java.util.Optional;
 import java.util.UUID;
 
 public class UserSimpleController implements UserController {
@@ -68,9 +69,15 @@ public class UserSimpleController implements UserController {
 
     @Override
     public byte[] getUserPortrait(UUID id) {
-        return service.find(id)
-                .map(User::getPortrait)
-                .orElseThrow(NotFoundException::new);
+        Optional<User> u = service.find(id);
+        if(u.isPresent()){
+            if(u.get().getPortrait() == null)
+                throw new NotFoundException();
+            else
+                return service.getPortrait(id);
+        }
+        else
+            throw new NotFoundException();
     }
 
     @Override

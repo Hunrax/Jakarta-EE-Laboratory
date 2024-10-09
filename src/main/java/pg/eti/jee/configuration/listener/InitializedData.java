@@ -9,6 +9,8 @@ import pg.eti.jee.user.entity.UserRoles;
 import pg.eti.jee.user.service.UserService;
 
 import java.io.InputStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.UUID;
@@ -18,14 +20,23 @@ public class InitializedData implements ServletContextListener {
 
     private UserService userService;
 
+    private String portraitPath;
+
     @Override
     public void contextInitialized(ServletContextEvent event) {
         userService = (UserService) event.getServletContext().getAttribute("userService");
+        portraitPath = event.getServletContext().getInitParameter("portraitPath");
         init();
     }
 
     @SneakyThrows
     private void init() {
+        Files.write(Path.of("userPortrait/c4804e0f-769e-4ab9-9ebe-0578fb4f00a6.jpg"), getResourceAsByteArray("../avatars/Admin.jpg"));
+        Files.write(Path.of("userPortrait/81e1c2a9-7f57-439b-b53d-6db88b071e4e.jpg"), getResourceAsByteArray("../avatars/Hunrax.jpg"));
+        Files.write(Path.of("userPortrait/ed6cfb2a-cad7-47dd-9b56-9d1e3c7a4197.jpg"), getResourceAsByteArray("../avatars/Anonim.jpg"));
+        Files.write(Path.of("userPortrait/f5875513-bf7b-4ae1-b8a5-5b70a1b90e76.jpg"), getResourceAsByteArray("../avatars/StudentPG.jpg"));
+        Files.write(Path.of("userPortrait/5d1da2ae-6a14-4b6d-8b4f-d117867118d4.jpg"), getResourceAsByteArray("../avatars/JanuszPL.jpg"));
+
         User admin = User.builder()
                 .id(UUID.fromString("c4804e0f-769e-4ab9-9ebe-0578fb4f00a6"))
                 .login("admin")
@@ -34,7 +45,7 @@ public class InitializedData implements ServletContextListener {
                 .birthDate(LocalDate.of(2000, 10, 10))
                 .password("adminadmin")
                 .roles(List.of(UserRoles.ADMIN, UserRoles.USER))
-                .portrait(getResourceAsByteArray("../avatars/Admin.jpg"))
+                .portrait("userPortrait/c4804e0f-769e-4ab9-9ebe-0578fb4f00a6.jpg")
                 .build();
 
         User radek = User.builder()
@@ -45,7 +56,7 @@ public class InitializedData implements ServletContextListener {
                 .birthDate(LocalDate.of(2003, 1, 20))
                 .password("useruser")
                 .roles(List.of(UserRoles.ADMIN))
-                .portrait(getResourceAsByteArray("../avatars/Hunrax.jpg"))
+                .portrait("userPortrait/81e1c2a9-7f57-439b-b53d-6db88b071e4e.jpg")
                 .build();
 
         User anonim = User.builder()
@@ -56,7 +67,7 @@ public class InitializedData implements ServletContextListener {
                 .birthDate(LocalDate.of(1212, 12, 12))
                 .password("AnonimowyAnonim")
                 .roles(List.of(UserRoles.USER))
-                .portrait(getResourceAsByteArray("../avatars/Anonim.jpg"))
+                .portrait("userPortrait/ed6cfb2a-cad7-47dd-9b56-9d1e3c7a4197.jpg")
                 .build();
 
         User studentPG = User.builder()
@@ -67,7 +78,7 @@ public class InitializedData implements ServletContextListener {
                 .birthDate(LocalDate.of(2001, 6, 16))
                 .password("Pawel123")
                 .roles(List.of(UserRoles.USER))
-                .portrait(getResourceAsByteArray("../avatars/StudentPG.jpg"))
+                .portrait("userPortrait/f5875513-bf7b-4ae1-b8a5-5b70a1b90e76.jpg")
                 .build();
 
         User janusz = User.builder()
@@ -78,7 +89,7 @@ public class InitializedData implements ServletContextListener {
                 .birthDate(LocalDate.of(1975, 4, 15))
                 .password("PolskaGurom")
                 .roles(List.of(UserRoles.USER))
-                .portrait(getResourceAsByteArray("../avatars/JanuszPL.jpg"))
+                .portrait("userPortrait/5d1da2ae-6a14-4b6d-8b4f-d117867118d4.jpg")
                 .build();
 
         userService.create(admin);
