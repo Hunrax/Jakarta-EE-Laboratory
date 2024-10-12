@@ -1,5 +1,6 @@
 package pg.eti.jee.controller.servlet;
 
+import jakarta.inject.Inject;
 import jakarta.json.bind.Jsonb;
 import jakarta.json.bind.JsonbBuilder;
 import jakarta.servlet.ServletException;
@@ -8,6 +9,8 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import pg.eti.jee.director.controller.api.DirectorController;
+import pg.eti.jee.movie.controller.api.MovieController;
 import pg.eti.jee.user.controller.api.UserController;
 import pg.eti.jee.user.dto.PatchUserRequest;
 import pg.eti.jee.user.dto.PutUserRequest;
@@ -22,7 +25,18 @@ import java.util.regex.Pattern;
 })
 @MultipartConfig(maxFileSize = 200 * 1024)
 public class ApiServlet extends HttpServlet {
-    private UserController userController;
+    private final UserController userController;
+
+    private final MovieController movieController;
+
+    private final DirectorController directorController;
+
+    @Inject
+    public ApiServlet(UserController userController, MovieController movieController, DirectorController directorController) {
+        this.userController = userController;
+        this.movieController = movieController;
+        this.directorController = directorController;
+    }
 
     public static final class Paths {
         public static final String API = "/api";
@@ -38,6 +52,12 @@ public class ApiServlet extends HttpServlet {
 
         public static final Pattern USER_PORTRAIT = Pattern.compile("/users/(%s)/portrait".formatted(UUID.pattern()));
 
+        public static final Pattern DIRECTORS = Pattern.compile("/directors/?");
+
+        public static final Pattern DIRECTOR_MOVIES = Pattern.compile("/directors/(%s)/movies".formatted(UUID.pattern()));
+
+        public static final Pattern USER_MOVIES = Pattern.compile("/users/(%s)/movies".formatted(UUID.pattern()));
+
     }
     private final Jsonb jsonb = JsonbBuilder.create();
 
@@ -48,12 +68,6 @@ public class ApiServlet extends HttpServlet {
         } else {
             super.service(request, response);
         }
-    }
-
-    @Override
-    public void init() throws ServletException {
-        super.init();
-        userController = (UserController) getServletContext().getAttribute("userController");
     }
 
     @SuppressWarnings("RedundantThrows")
@@ -77,6 +91,20 @@ public class ApiServlet extends HttpServlet {
                 byte[] portrait = userController.getUserPortrait(uuid);
                 response.setContentLength(portrait.length);
                 response.getOutputStream().write(portrait);
+                return;
+            } else if (path.matches(Patterns.USER_MOVIES.pattern())) {
+                response.setContentType("application/json");
+                UUID uuid = extractUuid(Patterns.USER_MOVIES, path);
+                response.getWriter().write(jsonb.toJson(movieController.getUserMovies(uuid)));
+                return;
+            } else if (path.matches(Patterns.DIRECTORS.pattern())) {
+                response.setContentType("application/json");
+                response.getWriter().write(jsonb.toJson(directorController.getDirectors()));
+                return;
+            } else if (path.matches(Patterns.DIRECTOR_MOVIES.pattern())) {
+                response.setContentType("application/json");
+                UUID uuid = extractUuid(Patterns.DIRECTOR_MOVIES, path);
+                response.getWriter().write(jsonb.toJson(movieController.getDirectorMovies(uuid)));
                 return;
             }
         }

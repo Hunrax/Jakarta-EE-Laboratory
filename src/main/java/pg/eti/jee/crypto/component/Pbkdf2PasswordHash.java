@@ -8,7 +8,9 @@ import java.security.MessageDigest;
 import java.security.SecureRandom;
 import java.security.spec.KeySpec;
 import java.util.Base64;
+import jakarta.enterprise.context.Dependent;
 
+@Dependent
 public class Pbkdf2PasswordHash {
 
     private static final String ALGORITHM = "PBKDF2WithHmacSHA256";

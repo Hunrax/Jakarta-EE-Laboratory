@@ -1,5 +1,7 @@
 package pg.eti.jee.user.repository.memory;
 
+import jakarta.enterprise.context.RequestScoped;
+import jakarta.inject.Inject;
 import pg.eti.jee.datastore.component.DataStore;
 import pg.eti.jee.user.entity.User;
 import pg.eti.jee.user.repository.api.UserRepository;
@@ -8,9 +10,11 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
+@RequestScoped
 public class UserInMemoryRepository implements UserRepository {
     private final DataStore store;
 
+    @Inject
     public UserInMemoryRepository(DataStore store) {
         this.store = store;
     }

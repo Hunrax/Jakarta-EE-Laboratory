@@ -10,16 +10,4 @@
         <param-value>userPortrait/</param-value>
     </context-param>
 
-    <listener>
-        <listener-class>pg.eti.jee.configuration.listener.CreateDataSource</listener-class>
-    </listener>
-
-    <listener>
-        <listener-class>pg.eti.jee.configuration.listener.CreateServices</listener-class>
-    </listener>
-
-    <listener>
-        <listener-class>pg.eti.jee.configuration.listener.CreateControllers</listener-class>
-    </listener>
-
 </web-app>

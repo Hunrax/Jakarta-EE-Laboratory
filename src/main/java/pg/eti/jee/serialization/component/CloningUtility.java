@@ -1,7 +1,7 @@
 package pg.eti.jee.serialization.component;
 
+import jakarta.enterprise.context.Dependent;
 import lombok.SneakyThrows;
-import lombok.extern.java.Log;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
@@ -10,6 +10,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
+@Dependent
 public class CloningUtility {
 
     @SneakyThrows

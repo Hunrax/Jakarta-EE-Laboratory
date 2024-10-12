@@ -1,6 +1,9 @@
 package pg.eti.jee.datastore.component;
 
-import pg.eti.jee.movie.entity.Director;
+import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.inject.Inject;
+import lombok.NoArgsConstructor;
+import pg.eti.jee.director.entity.Director;
 import pg.eti.jee.movie.entity.Movie;
 import pg.eti.jee.user.entity.User;
 import pg.eti.jee.serialization.component.CloningUtility;
@@ -11,6 +14,8 @@ import java.util.Set;
 import java.util.UUID;
 import java.util.stream.Collectors;
 
+@ApplicationScoped
+@NoArgsConstructor(force = true)
 public class DataStore {
 
     private final Set<Director> directors = new HashSet<>();
@@ -21,6 +26,7 @@ public class DataStore {
 
     private final CloningUtility cloningUtility;
 
+    @Inject
     public DataStore(CloningUtility cloningUtility) {
         this.cloningUtility = cloningUtility;
     }

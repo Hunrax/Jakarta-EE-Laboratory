@@ -1,4 +1,4 @@
-package pg.eti.jee.movie.entity;
+package pg.eti.jee.director.entity;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
