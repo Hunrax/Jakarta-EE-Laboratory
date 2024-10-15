@@ -58,6 +58,8 @@ public class ApiServlet extends HttpServlet {
 
         public static final Pattern USER_MOVIES = Pattern.compile("/users/(%s)/movies".formatted(UUID.pattern()));
 
+        public static final Pattern MOVIES = Pattern.compile("/movies/?");
+
     }
     private final Jsonb jsonb = JsonbBuilder.create();
 
@@ -105,6 +107,10 @@ public class ApiServlet extends HttpServlet {
                 response.setContentType("application/json");
                 UUID uuid = extractUuid(Patterns.DIRECTOR_MOVIES, path);
                 response.getWriter().write(jsonb.toJson(movieController.getDirectorMovies(uuid)));
+                return;
+            } else if (path.matches(Patterns.MOVIES.pattern())) {
+                response.setContentType("application/json");
+                response.getWriter().write(jsonb.toJson(movieController.getMovies()));
                 return;
             }
         }

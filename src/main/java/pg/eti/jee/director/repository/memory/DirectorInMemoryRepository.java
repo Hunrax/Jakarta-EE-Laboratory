@@ -39,12 +39,12 @@ public class DirectorInMemoryRepository implements DirectorRepository {
 
     @Override
     public void delete(UUID id) {
-        throw new UnsupportedOperationException("Operation not implemented.");
+        store.deleteDirector(id);
     }
 
     @Override
     public void update(Director entity) {
-        throw new UnsupportedOperationException("Operation not implemented.");
+        store.updateDirector(entity);
     }
 
 }

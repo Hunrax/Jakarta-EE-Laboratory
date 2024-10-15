@@ -5,6 +5,7 @@ import jakarta.enterprise.context.Initialized;
 import jakarta.enterprise.context.control.RequestContextController;
 import jakarta.enterprise.event.Observes;
 import jakarta.inject.Inject;
+import jakarta.servlet.ServletContext;
 import lombok.SneakyThrows;
 import pg.eti.jee.director.entity.Director;
 import pg.eti.jee.director.service.DirectorService;
@@ -14,6 +15,7 @@ import pg.eti.jee.user.entity.User;
 import pg.eti.jee.user.entity.UserRoles;
 import pg.eti.jee.user.service.UserService;
 
+import java.io.File;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -33,6 +35,8 @@ public class InitializedData {
 
     private final RequestContextController requestContextController;
 
+    private final ServletContext servletContext;
+
     private String portraitPath;
 
     @Inject
@@ -40,12 +44,14 @@ public class InitializedData {
             MovieService movieService,
             UserService userService,
             DirectorService directorService,
-            RequestContextController requestContextController
+            RequestContextController requestContextController,
+            ServletContext servletContext
     ) {
         this.movieService = movieService;
         this.userService = userService;
         this.directorService = directorService;
         this.requestContextController = requestContextController;
+        this.servletContext = servletContext;
     }
 
     public void contextInitialized(@Observes @Initialized(ApplicationScoped.class) Object init) {
@@ -57,6 +63,13 @@ public class InitializedData {
         requestContextController.activate();
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+
+        this.portraitPath = servletContext.getInitParameter("portraitPath");
+
+        File file = new File(this.portraitPath);
+        if(!file.exists()) {
+            file.mkdirs();
+        }
 
         Files.write(Path.of("userPortrait/c4804e0f-769e-4ab9-9ebe-0578fb4f00a6.jpg"), getResourceAsByteArray("../avatars/Admin.jpg"));
         Files.write(Path.of("userPortrait/81e1c2a9-7f57-439b-b53d-6db88b071e4e.jpg"), getResourceAsByteArray("../avatars/Hunrax.jpg"));
@@ -184,6 +197,16 @@ public class InitializedData {
         movieService.create(lotr2);
         movieService.create(lotr3);
         movieService.create(pulpFiction);
+
+//        pulpFiction.setTitle("New Pulp Fiction");
+//        movieService.update(pulpFiction);
+//
+//        quentinTarantino.setName("UpdatedQuentin");
+//        directorService.update(quentinTarantino);
+//
+//        directorService.delete(peterJackson.getId());
+//
+//        movieService.delete(pulpFiction.getId());
 
         requestContextController.deactivate();
     }

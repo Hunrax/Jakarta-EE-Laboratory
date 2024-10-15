@@ -44,6 +44,21 @@ public class DataStore {
         directors.add(cloningUtility.clone(value));
     }
 
+    public synchronized void updateDirector(Director value) throws IllegalArgumentException {
+        if (directors.removeIf(director -> director.getId().equals(value.getId()))) {
+            directors.add(cloningUtility.clone(value));
+        } else {
+            throw new IllegalArgumentException("The user with id \"%s\" does not exist".formatted(value.getId()));
+        }
+    }
+
+    public synchronized void deleteDirector(UUID id) throws IllegalArgumentException {
+        if (!directors.removeIf(Director -> Director.getId().equals(id))) {
+            throw new IllegalArgumentException("The Director with id \"%s\" does not exist".formatted(id));
+        }
+        movies.removeIf(Movie -> Movie.getDirector().getId().equals(id));
+    }
+
     public synchronized List<Movie> findAllMovies() {
         return movies.stream()
                 .map(cloningUtility::clone)

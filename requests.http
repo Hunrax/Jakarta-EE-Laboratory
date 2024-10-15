@@ -130,3 +130,12 @@ GET http://localhost:9080/jeelab/api/users/3c6f1eb1-8069-44ab-988f-d7fed2b65d87
 
 ###
 
+GET http://localhost:9080/jeelab/api/directors
+
+###
+
+GET http://localhost:9080/jeelab/api/directors/11111111-1111-1111-1111-d117867118e3/movies
+
+###
+
+GET http://localhost:9080/jeelab/api/movies

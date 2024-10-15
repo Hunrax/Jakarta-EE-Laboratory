@@ -32,4 +32,8 @@ public class DirectorService {
         repository.create(profession);
     }
 
+    public void update(Director profession) {repository.update(profession);};
+
+    public void delete(UUID id) {repository.delete(id);};
+
 }

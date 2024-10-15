@@ -1,0 +1,350 @@
+GET http://localhost:9080/jeelab/api/movies
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-15T145736.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/movies
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-15T145729.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/directors
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-15T145726.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/movies
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-15T145713.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/directors
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-15T145709.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/movies
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-15T145652.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/directors
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-15T145648.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/users
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-15T145642.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/users
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-15T142733.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/movies
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-15T141653.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/directors/11111111-1111-1111-1111-d117867118e3/movies
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-15T141643.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/directors
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-15T141640.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/movies
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-15T141552.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/movies
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-15T141536.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/directors/11111111-1111-1111-1111-d117867118e3/movies
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-15T141320.404.html
+
+###
+
+GET http://localhost:9080/jeelab/api/movies
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-15T141318.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/movies
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-15T141310.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/directors/11111111-1111-1111-1111-d117867118e3/movies
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-15T141308.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/directors
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-15T141306.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/directors/11111111-1111-1111-1111-d117867118e3/movies
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-15T141244.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/movies
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-15T141241.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/movies
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-15T141230.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/directors
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-15T141226.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/directors
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-15T141218.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/directors
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-15T141204.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/directors/11111111-1111-1111-1111-d117867118e3/movies
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-15T140853.404.html
+
+###
+
+GET http://localhost:9080/jeelab/api/directors
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-15T140851.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/directors/11111111-1111-1111-1111-d117867118e3/movies
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-15T140815.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/directors
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-15T140813.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/movies
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-15T140723.400.html
+
+###
+
+GET http://localhost:9080/jeelab/api/directors
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-15T140659.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/directors
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-15T140633.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/directors/11111111-1111-1111-1111-d117867118e3
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-15T140504.400.html
+
+###
+
+GET http://localhost:9080/jeelab/api/directors/11111111-1111-1111-1111-d117867118e3
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-15T140452.400.html
+
+###
+
+GET http://localhost:9080/jeelab/api/movies/5d1da2ae-6a14-4b6d-8b4f-d117867118e3
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.3
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-10-15T140409.400.html
+
+###
+
