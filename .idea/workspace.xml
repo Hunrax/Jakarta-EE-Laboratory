@@ -5,22 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="967d5e4b-3b86-447a-b108-a7db8572ca37" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requests.http" beforeDir="false" afterPath="$PROJECT_DIR$/requests.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/configuration/listener/InitializedData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/configuration/listener/InitializedData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/controller/servlet/ApiServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/controller/servlet/ApiServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/datastore/component/DataStore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/datastore/component/DataStore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/director/repository/memory/DirectorInMemoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/director/repository/memory/DirectorInMemoryRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/director/service/DirectorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/director/service/DirectorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/liberty/config/server.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/liberty/config/server.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -39,31 +40,46 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2nTMBSa4Uz0m6lC0VeG6IPH46nY" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "HTTP Request.requests | #1.executor": "Run",
-    "HTTP Request.requests | #18.executor": "Run",
-    "HTTP Request.requests | #19.executor": "Run",
-    "HTTP Request.requests | #20.executor": "Run",
-    "Maven.jeelab [io.openliberty.tools:liberty-maven-plugin:3.7.1:dev].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/student/Pulpit/jeelab",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;HTTP Request.requests | #1.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.requests | #18.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.requests | #19.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.requests | #20.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.jeelab [io.openliberty.tools:liberty-maven-plugin:3.7.1:dev].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Hunrax/Desktop/Jakarta-EE-Laboratory/src/main/webapp/director&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Hunrax\Desktop\Jakarta-EE-Laboratory\src\main\webapp\director" />
+      <recent name="C:\Users\Hunrax\Desktop\Jakarta-EE-Laboratory\src\main\webapp" />
+      <recent name="C:\Users\Hunrax\Desktop\Jakarta-EE-Laboratory\src\main\webapp\WEB-INF\template" />
+      <recent name="C:\Users\Hunrax\Desktop\Jakarta-EE-Laboratory\src\main\webapp\resources" />
+      <recent name="C:\Users\Hunrax\Desktop\Jakarta-EE-Laboratory\src\main\webapp\WEB-INF" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Hunrax\Desktop\Jakarta-EE-Laboratory\src\main\webapp\resources" />
+    </key>
+  </component>
   <component name="RunManager" selected="HTTP Request.requests | #20">
     <configuration name="requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/requests.http" requestIdentifier="#1" runType="Run single request">
       <method v="2" />
@@ -104,6 +120,10 @@
       <updated>1728992477080</updated>
       <workItem from="1728992478129" duration="4591000" />
       <workItem from="1729003675162" duration="119000" />
+      <workItem from="1729262073274" duration="618000" />
+      <workItem from="1729328356429" duration="8793000" />
+      <workItem from="1729340238645" duration="10016000" />
+      <workItem from="1729414568850" duration="5115000" />
     </task>
     <servers />
   </component>

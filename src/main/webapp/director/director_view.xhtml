@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="jakarta.faces.html"
+                xmlns:ui="jakarta.faces.facelets"
+                xmlns:f="jakarta.faces.core"
+                template="/WEB-INF/template/main.xhtml">
+
+    <f:metadata>
+        <f:viewParam name="id" value="#{directorView.id}" required="true"/>
+        <f:viewAction action="#{directorView.init()}"/>
+    </f:metadata>
+
+    <ui:define name="content">
+        <article>
+            <header><h2><h:outputText value="#{directorView.director.name} #{directorView.director.surname}"/></h2></header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-4">
+
+                        <div class="row mb-2">
+                            <div class="col-6">
+                                Name
+                            </div>
+                            <div class="col-6">
+                                <h:outputText value="#{directorView.director.name}"/>
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <div class="col-6">
+                                Surname
+                            </div>
+                            <div class="col-6">
+                                <h:outputText value="#{directorView.director.surname}"/>
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <div class="col-6">
+                                Birth Date
+                            </div>
+                            <div class="col-6">
+                                <h:outputText value="#{directorView.director.birthDate}"/>
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <div class="col-6">
+                                Oscars won
+                            </div>
+                            <div class="col-6">
+                                <h:outputText value="#{directorView.director.oscarAwards}"/>
+                            </div>
+                        </div>
+
+                        <div class="row mb-2">
+                            <div class="col-6">
+                                Movies
+                            </div>
+                            <h:dataTable value="#{directorView.movies}" var="movie" border="1">
+                                <h:column>
+                                    <f:facet name="header">Title</f:facet>
+                                    <h:outputText value="#{movie.title}"/>
+                                </h:column>
+                            </h:dataTable>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </article>
+    </ui:define>
+</ui:composition>
