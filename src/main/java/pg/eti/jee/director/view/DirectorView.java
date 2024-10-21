@@ -10,23 +10,21 @@ import lombok.Setter;
 import pg.eti.jee.component.ModelFunctionFactory;
 import pg.eti.jee.director.entity.Director;
 import pg.eti.jee.director.model.DirectorModel;
+import pg.eti.jee.director.model.DirectorsModel;
 import pg.eti.jee.director.service.DirectorService;
-import pg.eti.jee.movie.model.MovieModel;
+import pg.eti.jee.movie.model.MoviesModel;
 import pg.eti.jee.movie.service.MovieService;
 
 import java.io.IOException;
 import java.io.Serializable;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
-import java.util.stream.Collectors;
 
 @ViewScoped
 @Named
 public class DirectorView implements Serializable {
 
-    private final DirectorService service;
+    private final DirectorService directorService;
 
     private final MovieService movieService;
 
@@ -40,26 +38,30 @@ public class DirectorView implements Serializable {
     private DirectorModel director;
 
     @Getter
-    private List<MovieModel> movies;
+    private MoviesModel movies;
 
     @Inject
-    public DirectorView(DirectorService service, ModelFunctionFactory factory, MovieService movieService) {
-        this.service = service;
-        this.factory = factory;
+    public DirectorView(DirectorService directorService, MovieService movieService, ModelFunctionFactory factory) {
+        this.directorService = directorService;
         this.movieService = movieService;
+        this.factory = factory;
     }
 
     public void init() throws IOException {
-        Optional<Director> director = service.find(id);
+        Optional<Director> director = directorService.find(id);
         if (director.isPresent()) {
             this.director = factory.directorToModel().apply(director.get());
-//            this.movies = movieService.findAllByDirector(id);
-//            this.movies.stream()
-//                    .filter(movie -> movie.getDirector().getId().equals(id))
-//                    .collect(Collectors.toList());
+            this.movies = factory.moviesToModel().apply(movieService.findAll().stream()
+                    .filter(movie -> movie.getDirector() != null && movie.getDirector().getId().equals(id))
+                    .toList());
         } else {
             FacesContext.getCurrentInstance().getExternalContext().responseSendError(HttpServletResponse.SC_NOT_FOUND, "Director not found");
         }
+    }
+
+    public String deleteDirectorsMovieAction(MoviesModel.Movie movie) {
+        movieService.delete(movie.getId());
+        return "director_list?faces-redirect=true";
     }
 
 }

@@ -7,9 +7,14 @@
     <list default="true" id="967d5e4b-3b86-447a-b108-a7db8572ca37" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/liberty/config/server.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/liberty/config/server.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/date/converter/LocalDateConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/date/converter/LocalDateConverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/director/view/DirectorView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/director/view/DirectorView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/director/director_create__basic.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/director/director_create__basic.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/director/director_create__confirm.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/director/director_create__confirm.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/director/director_edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/director/director_edit.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/director/director_view.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/director/director_view.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/movie/movie_create__basic.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/movie/movie_create__basic.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/movie/movie_edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/movie/movie_edit.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -124,6 +129,8 @@
       <workItem from="1729328356429" duration="8793000" />
       <workItem from="1729340238645" duration="10016000" />
       <workItem from="1729414568850" duration="5115000" />
+      <workItem from="1729446618062" duration="3205000" />
+      <workItem from="1729524142282" duration="2419000" />
     </task>
     <servers />
   </component>

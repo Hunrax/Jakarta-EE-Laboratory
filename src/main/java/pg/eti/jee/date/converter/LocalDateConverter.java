@@ -11,7 +11,7 @@ import java.time.format.DateTimeFormatter;
 @FacesConverter("localDateConverter")
 public class LocalDateConverter implements Converter<LocalDate> {
 
-    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
+    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
 
     @Override
     public LocalDate getAsObject(FacesContext context, UIComponent component, String value) {
