@@ -2,6 +2,8 @@ package pg.eti.jee.user.controller.simple;
 
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
+import jakarta.ws.rs.BadRequestException;
+import jakarta.ws.rs.NotFoundException;
 import pg.eti.jee.component.DtoFunctionFactory;
 import pg.eti.jee.user.controller.api.UserController;
 import pg.eti.jee.user.dto.GetUserResponse;
@@ -11,8 +13,6 @@ import pg.eti.jee.user.dto.PutUserRequest;
 import pg.eti.jee.user.entity.User;
 import pg.eti.jee.user.service.PortraitService;
 import pg.eti.jee.user.service.UserService;
-import pg.eti.jee.controller.servlet.exception.NotFoundException;
-import pg.eti.jee.controller.servlet.exception.BadRequestException;
 
 import java.io.InputStream;
 import java.util.Optional;

@@ -3,6 +3,8 @@ package pg.eti.jee.component;
 import jakarta.enterprise.context.ApplicationScoped;
 import pg.eti.jee.director.dto.function.DirectorToResponseFunction;
 import pg.eti.jee.director.dto.function.DirectorsToResponseFunction;
+import pg.eti.jee.director.dto.function.RequestToDirectorFunction;
+import pg.eti.jee.director.dto.function.UpdateDirectorWithRequestFunction;
 import pg.eti.jee.movie.dto.function.MovieToResponseFunction;
 import pg.eti.jee.movie.dto.function.MoviesToResponseFunction;
 import pg.eti.jee.movie.dto.function.RequestToMovieFunction;
@@ -53,5 +55,13 @@ public class DtoFunctionFactory {
         return new UpdateMovieWithRequestFunction();
     }
 
+
+    public RequestToDirectorFunction requestToDirector() {
+        return new RequestToDirectorFunction();
+    }
+
+    public UpdateDirectorWithRequestFunction updateDirector() {
+        return new UpdateDirectorWithRequestFunction();
+    }
 
 }

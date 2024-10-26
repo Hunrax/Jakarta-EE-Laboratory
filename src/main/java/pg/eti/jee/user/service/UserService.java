@@ -3,15 +3,10 @@ package pg.eti.jee.user.service;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import lombok.NoArgsConstructor;
-import pg.eti.jee.controller.servlet.exception.NotFoundException;
 import pg.eti.jee.crypto.component.Pbkdf2PasswordHash;
 import pg.eti.jee.user.entity.User;
 import pg.eti.jee.user.repository.api.UserRepository;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;

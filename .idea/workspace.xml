@@ -5,16 +5,58 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="967d5e4b-3b86-447a-b108-a7db8572ca37" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-10-15T140409.400.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-10-15T140452.400.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-10-15T140504.400.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-10-15T140633.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-10-15T140659.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-10-15T140723.400.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-10-15T140813.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-10-15T140815.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-10-15T140851.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-10-15T140853.404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-10-15T141204.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-10-15T141218.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-10-15T141226.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-10-15T141230.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-10-15T141241.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-10-15T141244.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-10-15T141306.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-10-15T141308.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-10-15T141310.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-10-15T141318.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-10-15T141320.404.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-10-15T141536.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-10-15T141552.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-10-15T141640.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-10-15T141643.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-10-15T141653.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-10-15T142733.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-10-15T145642.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-10-15T145648.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-10-15T145652.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-10-15T145709.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-10-15T145713.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-10-15T145726.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-10-15T145729.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2024-10-15T145736.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/date/converter/LocalDateConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/date/converter/LocalDateConverter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/director/view/DirectorView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/director/view/DirectorView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/director/director_create__basic.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/director/director_create__basic.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/director/director_create__confirm.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/director/director_create__confirm.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/director/director_edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/director/director_edit.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/director/director_view.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/director/director_view.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/movie/movie_create__basic.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/movie/movie_create__basic.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/movie/movie_edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/movie/movie_edit.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/component/DtoFunctionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/component/DtoFunctionFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/controller/filter/ExceptionFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/controller/servlet/ApiServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/controller/servlet/exception/BadRequestException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/controller/servlet/exception/HttpRequestException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/controller/servlet/exception/NotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/director/controller/api/DirectorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/director/controller/api/DirectorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/director/controller/simple/DirectorSimpleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/director/controller/rest/DirectorRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/director/service/DirectorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/director/service/DirectorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/controller/api/MovieController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/controller/api/MovieController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/controller/simple/MovieSimpleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/controller/rest/MovieRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/user/controller/simple/UserSimpleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/user/controller/simple/UserSimpleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/user/service/PortraitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/user/service/PortraitService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/user/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/user/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/liberty/config/server.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/liberty/config/server.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,58 +94,62 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;HTTP Request.requests | #1.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.requests | #18.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.requests | #19.executor&quot;: &quot;Run&quot;,
-    &quot;HTTP Request.requests | #20.executor&quot;: &quot;Run&quot;,
-    &quot;Maven.jeelab [io.openliberty.tools:liberty-maven-plugin:3.7.1:dev].executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Hunrax/Desktop/Jakarta-EE-Laboratory/src/main/webapp/director&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "HTTP Request.requests | #1.executor": "Run",
+    "HTTP Request.requests | #18.executor": "Run",
+    "HTTP Request.requests | #19.executor": "Run",
+    "HTTP Request.requests | #20.executor": "Run",
+    "Maven.jeelab [io.openliberty.tools:liberty-maven-plugin:3.7.1:dev].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Radek/Desktop/Jakarta-EE-Laboratory/src/main/java/pg/eti/jee/director/dto/function",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Radek\Desktop\Jakarta-EE-Laboratory\src\main\java\pg\eti\jee\director\dto\function" />
+      <recent name="C:\Users\Radek\Desktop\Jakarta-EE-Laboratory\src\main\java\pg\eti\jee\director\dto" />
+      <recent name="C:\Users\Radek\Desktop\Jakarta-EE-Laboratory" />
       <recent name="C:\Users\Hunrax\Desktop\Jakarta-EE-Laboratory\src\main\webapp\director" />
       <recent name="C:\Users\Hunrax\Desktop\Jakarta-EE-Laboratory\src\main\webapp" />
-      <recent name="C:\Users\Hunrax\Desktop\Jakarta-EE-Laboratory\src\main\webapp\WEB-INF\template" />
-      <recent name="C:\Users\Hunrax\Desktop\Jakarta-EE-Laboratory\src\main\webapp\resources" />
-      <recent name="C:\Users\Hunrax\Desktop\Jakarta-EE-Laboratory\src\main\webapp\WEB-INF" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Hunrax\Desktop\Jakarta-EE-Laboratory\src\main\webapp\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="HTTP Request.requests | #20">
-    <configuration name="requests | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/requests.http" requestIdentifier="#1" runType="Run single request">
+  <component name="RunManager" selected="HTTP Request.lab4_requests | #4">
+    <configuration name="lab4_requests | #11" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/lab4_requests.http" index="11" requestIdentifier="#11" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="requests | #18" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/requests.http" index="18" requestIdentifier="#18" runType="Run single request">
+    <configuration name="lab4_requests | #12" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/lab4_requests.http" index="12" requestIdentifier="#12" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="requests | #19" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/requests.http" index="19" requestIdentifier="#19" runType="Run single request">
+    <configuration name="lab4_requests | #13" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/lab4_requests.http" index="13" requestIdentifier="#13" runType="Run single request">
       <method v="2" />
     </configuration>
-    <configuration name="requests | #20" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/requests.http" index="20" requestIdentifier="#20" runType="Run single request">
+    <configuration name="lab4_requests | #4" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/lab4_requests.http" index="4" requestIdentifier="#4" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="lab4_requests | #8" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$PROJECT_DIR$/lab4_requests.http" index="8" requestIdentifier="#8" runType="Run single request">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="HTTP Request.requests | #20" />
-        <item itemvalue="HTTP Request.requests | #18" />
-        <item itemvalue="HTTP Request.requests | #1" />
-        <item itemvalue="HTTP Request.requests | #19" />
+        <item itemvalue="HTTP Request.lab4_requests | #4" />
+        <item itemvalue="HTTP Request.lab4_requests | #13" />
+        <item itemvalue="HTTP Request.lab4_requests | #12" />
+        <item itemvalue="HTTP Request.lab4_requests | #11" />
+        <item itemvalue="HTTP Request.lab4_requests | #8" />
       </list>
     </recent_temporary>
   </component>
@@ -131,6 +177,8 @@
       <workItem from="1729414568850" duration="5115000" />
       <workItem from="1729446618062" duration="3205000" />
       <workItem from="1729524142282" duration="2419000" />
+      <workItem from="1729538838031" duration="746000" />
+      <workItem from="1729948427975" duration="10666000" />
     </task>
     <servers />
   </component>

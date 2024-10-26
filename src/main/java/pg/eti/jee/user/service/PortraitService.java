@@ -3,9 +3,8 @@ package pg.eti.jee.user.service;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.servlet.ServletContext;
+import jakarta.ws.rs.NotFoundException;
 import lombok.NoArgsConstructor;
-import pg.eti.jee.controller.servlet.exception.NotFoundException;
-import pg.eti.jee.crypto.component.Pbkdf2PasswordHash;
 import pg.eti.jee.user.entity.User;
 import pg.eti.jee.user.repository.api.UserRepository;
 
