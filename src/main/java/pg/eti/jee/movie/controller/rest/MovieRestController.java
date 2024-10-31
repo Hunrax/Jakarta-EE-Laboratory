@@ -71,9 +71,9 @@ public class MovieRestController implements MovieController {
     }
 
     @Override
-    public void putMovie(UUID id, PutMovieRequest request) {
+    public void putMovie(UUID directorId, UUID id, PutMovieRequest request) {
         try {
-            service.create(factory.requestToMovie().apply(id, request));
+            service.create(factory.requestToMovie().apply(directorId, id, request));
             response.setHeader("Location", uriInfo.getBaseUriBuilder()
                     .path(MovieController.class, "getMovie")
                     .build(id)
@@ -86,7 +86,7 @@ public class MovieRestController implements MovieController {
     }
 
     @Override
-    public void patchMovie(UUID id, PatchMovieRequest request) {
+    public void patchMovie(UUID directorId, UUID id, PatchMovieRequest request) {
         service.find(id).ifPresentOrElse(
                 entity -> service.update(factory.updateMovie().apply(entity, request)),
                 () -> {

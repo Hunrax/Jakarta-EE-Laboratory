@@ -39,14 +39,14 @@ public interface MovieController {
     GetMovieResponse getMovie(@PathParam("id") UUID id);
 
     @PUT
-    @Path("/movies/{id}")
+    @Path("/directors/{directorId}/movies/{id}")
     @Consumes({MediaType.APPLICATION_JSON})
-    void putMovie(@PathParam("id") UUID id, PutMovieRequest request);
+    void putMovie(@PathParam("directorId") UUID directorId, @PathParam("id") UUID id, PutMovieRequest request);
 
     @PATCH
-    @Path("/movies/{id}")
+    @Path("/directors/{directorId}/movies/{id}")
     @Consumes(MediaType.APPLICATION_JSON)
-    void patchMovie(@PathParam("id")UUID id, PatchMovieRequest request);
+    void patchMovie(@PathParam("directorId") UUID directorId, @PathParam("id")  UUID id, PatchMovieRequest request);
 
     @DELETE
     @Path("/movies/{id}")

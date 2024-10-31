@@ -68,11 +68,10 @@ GET http://localhost:9080/jeelab/api/directors
 
 # Create new movie.
 
-PUT http://localhost:9080/jeelab/api/movies/1a1f1eb1-2345-2345-2345-d117867118e3
+PUT http://localhost:9080/jeelab/api/directors/11111111-1111-1111-1111-d117867118e3/movies/1a1f1eb1-2345-2345-2345-d117867118e3
 Content-Type: application/json
 
 {
-  "directorId": "11111111-1111-1111-1111-d117867118e3",
   "releaseDate": "2024-10-26",
   "runningTime": 111,
   "title": "New movie"
@@ -114,7 +113,7 @@ GET http://localhost:9080/jeelab/api/directors/11111111-1111-1111-1111-d11786711
 
 # Update movie
 
-PATCH http://localhost:9080/jeelab/api/movies/7d1da2ae-1234-2345-1234-d117867118e3
+PATCH http://localhost:9080/jeelab/api/directors/11111111-1111-1111-1111-d117867118e3/movies/7d1da2ae-1234-2345-1234-d117867118e3
 Content-Type: application/json
 
 {
