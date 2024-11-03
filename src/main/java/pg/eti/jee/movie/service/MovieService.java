@@ -2,6 +2,7 @@ package pg.eti.jee.movie.service;
 
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
+import jakarta.transaction.Transactional;
 import lombok.NoArgsConstructor;
 import pg.eti.jee.director.repository.api.DirectorRepository;
 import pg.eti.jee.movie.entity.Movie;
@@ -45,14 +46,28 @@ public class MovieService {
         return movieRepository.findAllByUser(user);
     }
 
+    @Transactional
     public void create(Movie movie) {
+        if (movieRepository.find(movie.getId()).isPresent()) {
+            throw new IllegalArgumentException("Movie already exists.");
+        }
+        if (directorRepository.find(movie.getDirector().getId()).isEmpty()) {
+            throw new IllegalArgumentException("Director does not exist.");
+        }
         movieRepository.create(movie);
+
+        directorRepository.find(movie.getDirector().getId())
+                .ifPresent(director -> director.getMovies().add(movie));
+//        userRepository.find(movie.getUser().getId())
+//                .ifPresent(user -> user.getMovies().add(movie));
     }
 
+    @Transactional
     public void update(Movie movie) {
         movieRepository.update(movie);
     }
 
+    @Transactional
     public void delete(UUID id) {
         movieRepository.delete(id);
     }

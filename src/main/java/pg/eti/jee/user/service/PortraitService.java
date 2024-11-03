@@ -3,6 +3,7 @@ package pg.eti.jee.user.service;
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 import jakarta.servlet.ServletContext;
+import jakarta.transaction.Transactional;
 import jakarta.ws.rs.NotFoundException;
 import lombok.NoArgsConstructor;
 import pg.eti.jee.user.entity.User;
@@ -29,6 +30,7 @@ public class PortraitService {
         this.portraitPath = servletContext.getInitParameter("portraitPath");
     }
 
+    @Transactional
     public void updatePortrait(UUID id, InputStream is) {
         repository.find(id).ifPresent(user -> {
             String portraitFullPath = portraitPath + user.getId() + ".jpg";
@@ -56,6 +58,7 @@ public class PortraitService {
         throw new NotFoundException();
     }
 
+    @Transactional
     public void deletePortrait(UUID id) {
         repository.find(id).ifPresent(user -> {
             try {

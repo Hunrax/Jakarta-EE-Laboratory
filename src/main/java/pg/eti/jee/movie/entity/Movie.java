@@ -1,5 +1,6 @@
 package pg.eti.jee.movie.entity;
 
+import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
@@ -22,17 +23,23 @@ import java.util.UUID;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @ToString(callSuper = true)
 @EqualsAndHashCode()
+@Entity
+@Table(name = "movies")
 public class Movie implements Serializable {
-
+    @Id
     private UUID id;
 
     private String title;
 
     private int runningTime;
 
+    @ManyToOne
+    @JoinColumn(name = "director")
     private Director director;
 
     private LocalDate releaseDate;
 
+    @ManyToOne
+    @JoinColumn(name = "user_name")
     private User user;
 }

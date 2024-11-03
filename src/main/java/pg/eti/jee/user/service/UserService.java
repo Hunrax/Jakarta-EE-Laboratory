@@ -2,6 +2,7 @@ package pg.eti.jee.user.service;
 
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
+import jakarta.transaction.Transactional;
 import lombok.NoArgsConstructor;
 import pg.eti.jee.crypto.component.Pbkdf2PasswordHash;
 import pg.eti.jee.user.entity.User;
@@ -36,15 +37,16 @@ public class UserService {
         return repository.findAll();
     }
 
+    @Transactional
     public void create(User user) {
         user.setPassword(passwordHash.generate(user.getPassword().toCharArray()));
         repository.create(user);
     }
 
-    public void create(UUID id) { repository.delete(id); }
-
+    @Transactional
     public void update(User user) { repository.update(user); }
 
+    @Transactional
     public void delete(UUID id) { repository.delete(id); }
 
     public boolean verify(String login, String password) {

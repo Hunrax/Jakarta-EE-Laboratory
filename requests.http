@@ -55,7 +55,7 @@ PUT http://localhost:9080/jeelab/api/users/3c6f1eb1-8069-44ab-988f-d7fed2b65d87/
 Content-Type: multipart/form-data; boundary=boundary
 
 --boundary
-Content-Disposition: form-data; name="portrait"; filename="Green.jpg'
+Content-Disposition: form-data; name="portrait"; filename="Green.jpg"
 
 < src/main/resources/pg/eti/jee/configuration/avatars/Green.jpg
 --boundary--
@@ -93,7 +93,7 @@ PATCH http://localhost:9080/jeelab/api/users/3c6f1eb1-8069-44ab-988f-d7fed2b65d8
 Content-Type: multipart/form-data; boundary=boundary
 
 --boundary
-Content-Disposition: form-data; name="portrait"; filename="Nowy.jpg'
+Content-Disposition: form-data; name="portrait"; filename="Nowy.jpg"
 
 < src/main/resources/pg/eti/jee/configuration/avatars/Nowy.jpg
 --boundary--

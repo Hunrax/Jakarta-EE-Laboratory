@@ -2,6 +2,7 @@ package pg.eti.jee.director.service;
 
 import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
+import jakarta.transaction.Transactional;
 import lombok.NoArgsConstructor;
 import pg.eti.jee.director.entity.Director;
 import pg.eti.jee.director.repository.api.DirectorRepository;
@@ -21,18 +22,22 @@ public class DirectorService {
     }
 
     public Optional<Director> find(UUID id) {
-        return repository.find(id);
+        Optional<Director> director = repository.find(id);
+        return director;
     }
 
     public List<Director> findAll() {
         return repository.findAll();
     }
 
-    public void create(Director profession) {
-        repository.create(profession);
+    @Transactional
+    public void create(Director director) {
+        repository.create(director);
     }
 
-    public void update(Director profession) {repository.update(profession);};
+    @Transactional
+    public void update(Director director) {repository.update(director);};
 
+    @Transactional
     public void delete(UUID id) {repository.delete(id);};
 }
