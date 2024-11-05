@@ -3,7 +3,7 @@ Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
-<> 2024-11-02T223243.200.json
+<> 2024-11-05T170219.200.json
 
 ###
 
@@ -19,7 +19,7 @@ Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
-<> 2024-11-02T223239.200.json
+<> 2024-11-05T170217.200.json
 
 ###
 
@@ -28,7 +28,7 @@ Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
-<> 2024-11-02T223237.200.json
+<> 2024-11-05T170212.200.json
 
 ###
 
@@ -44,7 +44,7 @@ Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
-<> 2024-11-02T223231.200.json
+<> 2024-11-05T170209.200.json
 
 ###
 
@@ -68,7 +68,7 @@ Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
-<> 2024-11-02T223226.200.json
+<> 2024-11-05T170205.200.json
 
 ###
 
@@ -93,7 +93,7 @@ Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
-<> 2024-11-02T223222.200.json
+<> 2024-11-05T170201.200.json
 
 ###
 
@@ -102,7 +102,7 @@ Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
-<> 2024-11-02T223220.200.json
+<> 2024-11-05T170200.200.json
 
 ###
 
@@ -126,7 +126,7 @@ Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
-<> 2024-11-02T223215.200.json
+<> 2024-11-05T170156.200.json
 
 ###
 
@@ -135,7 +135,7 @@ Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
-<> 2024-11-02T223214.200.json
+<> 2024-11-05T170155.200.json
 
 ###
 
@@ -155,6 +155,24 @@ Accept-Encoding: br,deflate,gzip,x-gzip
 
 ###
 
+GET http://localhost:9080/jeelab/api/movies
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-11-05T170150.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/directors/11111111-1111-1111-1111-d117867118e3/movies
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-11-05T170147.200.json
+
+###
+
 GET http://localhost:9080/jeelab/api/directors/6d6f1eb1-1234-2345-1234-d7fed2b65d87
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
@@ -167,7 +185,7 @@ Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
-<> 2024-11-02T223208.200.json
+<> 2024-11-05T170143.200.json
 
 ###
 
@@ -176,7 +194,7 @@ Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
-<> 2024-11-02T223207.200.json
+<> 2024-11-05T170142.200.json
 
 ###
 
@@ -185,7 +203,7 @@ Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
-<> 2024-11-02T223205.200.json
+<> 2024-11-05T170141.200.json
 
 ###
 
@@ -201,7 +219,7 @@ Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
-<> 2024-11-02T223201.200.json
+<> 2024-11-05T170138.200.json
 
 ###
 
@@ -210,32 +228,55 @@ Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
-<> 2024-11-02T223200.200.json
+<> 2024-11-05T170136.200.json
 
 ###
 
-DELETE http://localhost:9080/jeelab/api/directors/11111111-1111-1111-1111-d117867118e3
+GET http://localhost:9080/jeelab/api/directors
 Connection: Keep-Alive
 User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
 Accept-Encoding: br,deflate,gzip,x-gzip
 
+<> 2024-11-05T170134.200.json
+
 ###
 
-GET http://localhost:9080/jeelab/api/movies/7d1da2ae-1234-2345-1234-d117867118e3
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Accept-Encoding: br,deflate,gzip,x-gzip
+GET http://localhost:9080/jeelab/api/directors
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
 
-<> 2024-11-02T222605.200.json
+<> 2024-11-05T143158.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/movies
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-11-05T143049.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/directors
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-11-05T143045.200.json
 
 ###
 
 PATCH http://localhost:9080/jeelab/api/directors/11111111-1111-1111-1111-d117867118e3/movies/7d1da2ae-1234-2345-1234-d117867118e3
 Content-Type: application/json
 Content-Length: 115
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Accept-Encoding: br,deflate,gzip,x-gzip
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
 
 {
   "releaseDate": "2003-12-17",
@@ -245,21 +286,159 @@ Accept-Encoding: br,deflate,gzip,x-gzip
 
 ###
 
-GET http://localhost:9080/jeelab/api/directors/11111111-1111-1111-1111-d117867118e3
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Accept-Encoding: br,deflate,gzip,x-gzip
+GET http://localhost:9080/jeelab/api/movies
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
 
-<> 2024-11-02T222537.200.json
+<> 2024-11-05T143031.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/directors
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-11-05T143029.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/directors/11111111-1111-1111-1111-d117867118e3
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-11-05T143026.200.json
 
 ###
 
 PATCH http://localhost:9080/jeelab/api/directors/11111111-1111-1111-1111-d117867118e3
 Content-Type: application/json
 Content-Length: 102
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Accept-Encoding: br,deflate,gzip,x-gzip
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "name": "New Peter",
+  "surname": "New Jackson",
+  "oscarAwards": 3,
+  "birthDate": "1961-10-31"
+}
+
+###
+
+GET http://localhost:9080/jeelab/api/directors
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-11-05T142710.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/movies
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-11-05T142407.200.json
+
+###
+
+DELETE http://localhost:9080/jeelab/api/movies/1d1da2a4-1122-3344-5566-d117867118e3
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+###
+
+GET http://localhost:9080/jeelab/api/movies
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-11-05T142404.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/directors
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-11-05T142401.200.json
+
+###
+
+DELETE http://localhost:9080/jeelab/api/directors/11111111-1111-1111-1111-d117867118e3
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+###
+
+GET http://localhost:9080/jeelab/api/movies/7d1da2ae-1234-2345-1234-d117867118e3
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-11-05T142357.200.json
+
+###
+
+PATCH http://localhost:9080/jeelab/api/directors/11111111-1111-1111-1111-d117867118e3/movies/7d1da2ae-1234-2345-1234-d117867118e3
+Content-Type: application/json
+Content-Length: 115
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+
+{
+  "releaseDate": "2003-12-17",
+  "runningTime": 201,
+  "title": "New The Lord of the Rings: Return of the King"
+}
+
+###
+
+GET http://localhost:9080/jeelab/api/movies/1a1f1eb1-2345-2345-2345-d117867118e3
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-11-05T142354.200.json
+
+###
+
+GET http://localhost:9080/jeelab/api/directors/11111111-1111-1111-1111-d117867118e3
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
+
+<> 2024-11-05T142352.200.json
+
+###
+
+PATCH http://localhost:9080/jeelab/api/directors/11111111-1111-1111-1111-d117867118e3
+Content-Type: application/json
+Content-Length: 102
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
 
 {
   "name": "New Peter",
@@ -271,29 +450,31 @@ Accept-Encoding: br,deflate,gzip,x-gzip
 ###
 
 GET http://localhost:9080/jeelab/api/movies
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Accept-Encoding: br,deflate,gzip,x-gzip
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
 
-<> 2024-11-02T222532.200.json
+<> 2024-11-05T142334.200.json
 
 ###
 
 GET http://localhost:9080/jeelab/api/movies/1a1f1eb1-2345-2345-2345-d117867118e3
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Accept-Encoding: br,deflate,gzip,x-gzip
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
 
-<> 2024-11-02T222530.200.json
+<> 2024-11-05T142332.200.json
 
 ###
 
 PUT http://localhost:9080/jeelab/api/directors/11111111-1111-1111-1111-d117867118e3/movies/1a1f1eb1-2345-2345-2345-d117867118e3
 Content-Type: application/json
 Content-Length: 79
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Accept-Encoding: br,deflate,gzip,x-gzip
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
 
 {
   "releaseDate": "2024-10-26",
@@ -304,29 +485,31 @@ Accept-Encoding: br,deflate,gzip,x-gzip
 ###
 
 GET http://localhost:9080/jeelab/api/directors
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Accept-Encoding: br,deflate,gzip,x-gzip
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
 
-<> 2024-11-02T222526.200.json
+<> 2024-11-05T142327.200.json
 
 ###
 
 GET http://localhost:9080/jeelab/api/directors/6d6f1eb1-1234-2345-1234-d7fed2b65d87
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Accept-Encoding: br,deflate,gzip,x-gzip
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
+content-length: 0
 
-<> 2024-11-02T222523.200.json
+<> 2024-11-05T142324.200.json
 
 ###
 
 PUT http://localhost:9080/jeelab/api/directors/6d6f1eb1-1234-2345-1234-d7fed2b65d87
 Content-Type: application/json
 Content-Length: 94
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Accept-Encoding: br,deflate,gzip,x-gzip
+User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.2.4
+Accept-Encoding: br, deflate, gzip, x-gzip
+Accept: */*
 
 {
   "birthDate": "2001-10-15",
@@ -334,185 +517,6 @@ Accept-Encoding: br,deflate,gzip,x-gzip
   "oscarAwards": 10,
   "surname": "Rezyser"
 }
-
-###
-
-GET http://localhost:9080/jeelab/api/directors/6d6f1eb1-1234-2345-1234-d7fed2b65d87
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-GET http://localhost:9080/jeelab/api/movies/7d1da2ae-1234-2345-1234-d117867118e3
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2024-11-02T222517.200.json
-
-###
-
-GET http://localhost:9080/jeelab/api/movies
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2024-11-02T222516.200.json
-
-###
-
-GET http://localhost:9080/jeelab/api/directors/11111111-1111-1111-1111-d117867118e3/movies
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2024-11-02T222515.200.json
-
-###
-
-GET http://localhost:9080/jeelab/api/directors/6d6f1eb1-1234-2345-1234-d7fed2b65d87
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-GET http://localhost:9080/jeelab/api/directors/11111111-1111-1111-1111-d117867118e3
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2024-11-02T222512.200.json
-
-###
-
-GET http://localhost:9080/jeelab/api/directors
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2024-11-02T222510.200.json
-
-###
-
-GET http://localhost:9080/jeelab/api/directors/11111111-1111-1111-1111-d117867118e3
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2024-11-02T222122.200.json
-
-###
-
-PATCH http://localhost:9080/jeelab/api/directors/11111111-1111-1111-1111-d117867118e3
-Content-Type: application/json
-Content-Length: 102
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "name": "New Peter",
-  "surname": "New Jackson",
-  "oscarAwards": 3,
-  "birthDate": "1961-10-31"
-}
-
-###
-
-GET http://localhost:9080/jeelab/api/movies/7d1da2ae-1234-2345-1234-d117867118e3
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2024-11-02T222107.200.json
-
-###
-
-PATCH http://localhost:9080/jeelab/api/directors/11111111-1111-1111-1111-d117867118e3/movies/7d1da2ae-1234-2345-1234-d117867118e3
-Content-Type: application/json
-Content-Length: 115
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "releaseDate": "2003-12-17",
-  "runningTime": 201,
-  "title": "New The Lord of the Rings: Return of the King"
-}
-
-###
-
-PATCH http://localhost:9080/jeelab/api/directors/11111111-1111-1111-1111-d117867118e3/movies/7d1da2ae-1234-2345-1234-d117867118e3
-Content-Type: application/json
-Content-Length: 115
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "releaseDate": "2003-12-17",
-  "runningTime": 201,
-  "title": "New The Lord of the Rings: Return of the King"
-}
-
-###
-
-GET http://localhost:9080/jeelab/api/movies/7d1da2ae-1234-2345-1234-d117867118e3
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-###
-
-PATCH http://localhost:9080/jeelab/api/directors/11111111-1111-1111-1111-d117867118e3/movies/7d1da2ae-1234-2345-1234-d117867118e3
-Content-Type: application/json
-Content-Length: 115
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "releaseDate": "2003-12-17",
-  "runningTime": 201,
-  "title": "New The Lord of the Rings: Return of the King"
-}
-
-###
-
-GET http://localhost:9080/jeelab/api/directors/11111111-1111-1111-1111-d117867118e3
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2024-11-02T221753.200.json
-
-###
-
-PATCH http://localhost:9080/jeelab/api/directors/11111111-1111-1111-1111-d117867118e3
-Content-Type: application/json
-Content-Length: 102
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-{
-  "name": "New Peter",
-  "surname": "New Jackson",
-  "oscarAwards": 3,
-  "birthDate": "1961-10-31"
-}
-
-###
-
-GET http://localhost:9080/jeelab/api/movies
-Connection: Keep-Alive
-User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
-Accept-Encoding: br,deflate,gzip,x-gzip
-
-<> 2024-11-02T221750.200.json
 
 ###
 

@@ -36,11 +36,16 @@ public class MoviePersistanceRepository implements MovieRepository {
     @Override
     public void create(Movie entity) {
         em.persist(entity);
+        Director director = em.find(Director.class, entity.getDirector().getId());
+        em.refresh(director);
     }
 
     @Override
     public void delete(UUID id) {
+        Movie movie = em.find(Movie.class, id);
+        Director director = em.find(Director.class, movie.getDirector().getId());
         em.remove(em.find(Movie.class, id));
+        em.refresh(director);
     }
 
     @Override
@@ -69,8 +74,10 @@ public class MoviePersistanceRepository implements MovieRepository {
 
     @Override
     public List<Movie> findAllByDirector(Director director) {
-        return em.createQuery("select m from Movie m where m.director = :director", Movie.class)
-                .setParameter("director", director)
-                .getResultList();
+//        return em.createQuery("select m from Movie m where m.director = :director", Movie.class)
+//                .setParameter("director", director)
+//                .getResultList();
+        Director entity = em.find(Director.class, director.getId());
+        return entity.getMovies();
     }
 }

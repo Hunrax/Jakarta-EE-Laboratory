@@ -32,6 +32,8 @@ public class DirectorPersistanceRepository implements DirectorRepository {
     @Override
     public void create(Director entity) {
         em.persist(entity);
+        em.flush();
+        em.clear();
     }
 
     @Override
