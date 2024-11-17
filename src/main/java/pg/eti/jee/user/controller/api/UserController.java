@@ -39,16 +39,16 @@ public interface UserController {
 
     @GET
     @Path("/users/{id}/portrait")
-    @Produces(MediaType.MULTIPART_FORM_DATA)
-    byte[] getUserPortrait(UUID id);
+    @Produces("image/png")
+    byte[] getUserPortrait(@PathParam("id") UUID id);
 
     @PUT
     @Path("/users/{id}/portrait")
     @Consumes(MediaType.MULTIPART_FORM_DATA)
-    void putUserPortrait(UUID id, InputStream portrait);
+    void putUserPortrait(@PathParam("id") UUID id, InputStream portrait);
 
     @DELETE
     @Path("/users/{id}/portrait")
-    void deleteUserPortrait(UUID id);
+    void deleteUserPortrait(@PathParam("id") UUID id);
 
 }

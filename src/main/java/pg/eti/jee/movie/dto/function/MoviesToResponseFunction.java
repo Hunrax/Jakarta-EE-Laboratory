@@ -15,6 +15,7 @@ public class MoviesToResponseFunction implements Function<List<Movie>, GetMovies
                         .map(movie -> GetMoviesResponse.Movie.builder()
                                 .id(movie.getId())
                                 .title(movie.getTitle())
+                                .user(movie.getUser().getLogin())
                                 .build())
                         .toList())
                 .build();

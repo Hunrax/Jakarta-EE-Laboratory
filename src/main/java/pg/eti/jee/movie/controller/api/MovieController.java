@@ -43,6 +43,7 @@ public interface MovieController {
     @Consumes({MediaType.APPLICATION_JSON})
     void putMovie(@PathParam("directorId") UUID directorId, @PathParam("id") UUID id, PutMovieRequest request);
 
+
     @PATCH
     @Path("/directors/{directorId}/movies/{id}")
     @Consumes(MediaType.APPLICATION_JSON)

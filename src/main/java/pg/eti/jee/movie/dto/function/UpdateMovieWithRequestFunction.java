@@ -14,6 +14,7 @@ public class UpdateMovieWithRequestFunction implements BiFunction<Movie, PatchMo
                 .title(request.getTitle())
                 .releaseDate(request.getReleaseDate())
                 .director(entity.getDirector())
+                .user(entity.getUser())
                 .runningTime(request.getRunningTime())
                 .build();
     }

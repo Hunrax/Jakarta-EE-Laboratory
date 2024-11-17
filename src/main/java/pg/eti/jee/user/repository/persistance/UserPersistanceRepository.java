@@ -1,6 +1,6 @@
 package pg.eti.jee.user.repository.persistance;
 
-import jakarta.enterprise.context.RequestScoped;
+import jakarta.enterprise.context.Dependent;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.NoResultException;
 import jakarta.persistence.EntityManager;
@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-@RequestScoped
+@Dependent
 public class UserPersistanceRepository implements UserRepository {
     private EntityManager em;
 

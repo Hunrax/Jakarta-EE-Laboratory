@@ -8,7 +8,26 @@
         <feature>faces-4.0</feature>
         <feature>restfulWS-3.1</feature>
         <feature>persistence-3.1</feature>
+        <feature>enterpriseBeans-4.0</feature>
+        <feature>appSecurity-5.0</feature>
     </featureManager>
+
+    <variables>
+        <variable name="portraitPath" value="userPortrait"/>
+    </variables>
+
+    <application type="war" location="jeelab-1.0-SNAPSHOT.war">
+        <application-bnd>
+            <security-role name="admin">
+                <group name="admin" access-id="group:jdbc/JeeLaboratory/admin"/>
+                <run-as userid="admin-service"/>
+            </security-role>
+            <security-role name="user">
+                <group name="user" access-id="group:jdbc/JeeLaboratory/user"/>
+            </security-role>
+        </application-bnd>
+    </application>
+
 
     <dataSource id="JeeLaboratoryDataSource" jndiName="jdbc/JeeLaboratory">
         <jdbcDriver javax.sql.XADataSource="org.h2.jdbcx.JdbcDataSource"

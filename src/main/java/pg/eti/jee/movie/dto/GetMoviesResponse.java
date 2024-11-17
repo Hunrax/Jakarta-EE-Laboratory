@@ -34,6 +34,8 @@ public class GetMoviesResponse {
 
         private String title;
 
+        private String user;
+
     }
 
     @Singular

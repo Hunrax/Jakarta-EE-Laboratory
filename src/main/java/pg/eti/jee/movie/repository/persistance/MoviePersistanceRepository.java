@@ -1,6 +1,6 @@
 package pg.eti.jee.movie.repository.persistance;
 
-import jakarta.enterprise.context.RequestScoped;
+import jakarta.enterprise.context.Dependent;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.NoResultException;
 import jakarta.persistence.PersistenceContext;
@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-@RequestScoped
+@Dependent
 public class MoviePersistanceRepository implements MovieRepository {
 
     private EntityManager em;
@@ -44,8 +44,12 @@ public class MoviePersistanceRepository implements MovieRepository {
     public void delete(UUID id) {
         Movie movie = em.find(Movie.class, id);
         Director director = em.find(Director.class, movie.getDirector().getId());
+        User user = em.find(User.class, movie.getUser().getId());
+
         em.remove(em.find(Movie.class, id));
+
         em.refresh(director);
+        em.refresh(user);
     }
 
     @Override
@@ -67,9 +71,11 @@ public class MoviePersistanceRepository implements MovieRepository {
 
     @Override
     public List<Movie> findAllByUser(User user) {
-        return em.createQuery("select m from Movie m where m.user = :user", Movie.class)
-                .setParameter("user", user)
-                .getResultList();
+//        return em.createQuery("select m from Movie m where m.user = :user", Movie.class)
+//                .setParameter("user", user)
+//                .getResultList();
+        User entity = em.find(User.class, user.getId());
+        return entity.getMovies();
     }
 
     @Override

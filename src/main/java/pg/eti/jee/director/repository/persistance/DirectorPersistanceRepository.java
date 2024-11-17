@@ -1,6 +1,6 @@
 package pg.eti.jee.director.repository.persistance;
 
-import jakarta.enterprise.context.RequestScoped;
+import jakarta.enterprise.context.Dependent;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import pg.eti.jee.director.entity.Director;
@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 
-@RequestScoped
+@Dependent
 public class DirectorPersistanceRepository implements DirectorRepository {
     private EntityManager em;
 

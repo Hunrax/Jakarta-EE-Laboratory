@@ -1,12 +1,16 @@
 package pg.eti.jee.user.service;
 
-import jakarta.enterprise.context.ApplicationScoped;
+import jakarta.annotation.Resource;
+import jakarta.annotation.security.PermitAll;
+import jakarta.annotation.security.RolesAllowed;
+import jakarta.ejb.LocalBean;
+import jakarta.ejb.Stateless;
 import jakarta.inject.Inject;
 import jakarta.servlet.ServletContext;
-import jakarta.transaction.Transactional;
 import jakarta.ws.rs.NotFoundException;
 import lombok.NoArgsConstructor;
 import pg.eti.jee.user.entity.User;
+import pg.eti.jee.user.entity.UserRoles;
 import pg.eti.jee.user.repository.api.UserRepository;
 
 import java.io.IOException;
@@ -16,21 +20,22 @@ import java.nio.file.Path;
 import java.util.Optional;
 import java.util.UUID;
 
-@ApplicationScoped
+@LocalBean
+@Stateless
 @NoArgsConstructor(force = true)
 public class PortraitService {
 
     private final UserRepository repository;
 
-    private final String portraitPath;
+    @Resource(name="portraitPath")
+    private String portraitPath;
 
     @Inject
-    public PortraitService(UserRepository repository, ServletContext servletContext) {
+    public PortraitService(UserRepository repository) {
         this.repository = repository;
-        this.portraitPath = servletContext.getInitParameter("portraitPath");
     }
 
-    @Transactional
+    @RolesAllowed(UserRoles.USER)
     public void updatePortrait(UUID id, InputStream is) {
         repository.find(id).ifPresent(user -> {
             String portraitFullPath = portraitPath + user.getId() + ".jpg";
@@ -45,6 +50,7 @@ public class PortraitService {
         });
     }
 
+    @PermitAll
     public byte[] getPortrait(UUID id){
         Optional<User> u = repository.find(id);
         if(u.isPresent()){
@@ -58,7 +64,7 @@ public class PortraitService {
         throw new NotFoundException();
     }
 
-    @Transactional
+    @RolesAllowed(UserRoles.ADMIN)
     public void deletePortrait(UUID id) {
         repository.find(id).ifPresent(user -> {
             try {

@@ -1,9 +1,12 @@
 package pg.eti.jee.movie.controller.rest;
 
+import jakarta.annotation.security.RolesAllowed;
+import jakarta.ejb.EJB;
+import jakarta.ejb.EJBAccessException;
+import jakarta.ejb.EJBException;
 import jakarta.inject.Inject;
 import jakarta.servlet.http.HttpServletResponse;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.WebApplicationException;
+import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.Response;
 import jakarta.ws.rs.core.UriInfo;
@@ -15,19 +18,18 @@ import pg.eti.jee.movie.dto.GetMoviesResponse;
 import pg.eti.jee.movie.dto.PatchMovieRequest;
 import pg.eti.jee.movie.dto.PutMovieRequest;
 import pg.eti.jee.movie.service.MovieService;
-import jakarta.transaction.TransactionalException;
 
-import jakarta.ws.rs.BadRequestException;
-import jakarta.ws.rs.NotFoundException;
+import pg.eti.jee.user.entity.UserRoles;
 
 import java.util.UUID;
 import java.util.logging.Level;
 
+@RolesAllowed(UserRoles.USER)
 @Path("")
 @Log
 public class MovieRestController implements MovieController {
 
-    private final MovieService service;
+    private MovieService service;
 
     private final DtoFunctionFactory factory;
 
@@ -41,12 +43,17 @@ public class MovieRestController implements MovieController {
     }
 
     @Inject
-    public MovieRestController(MovieService service, DtoFunctionFactory factory,
+    public MovieRestController(DtoFunctionFactory factory,
                                @SuppressWarnings("CdiInjectionPointsInspection") UriInfo uriInfo) {
-        this.service = service;
         this.factory = factory;
         this.uriInfo = uriInfo;
     }
+
+    @EJB
+    public void setService(MovieService service) {
+        this.service = service;
+    }
+
 
     @Override
     public GetMoviesResponse getMovies() {
@@ -77,14 +84,14 @@ public class MovieRestController implements MovieController {
     @Override
     public void putMovie(UUID directorId, UUID id, PutMovieRequest request) {
         try {
-            service.create(factory.requestToMovie().apply(directorId, id, request));
+            service.createForCallerPrincipal(factory.requestToMovie().apply(directorId, id, request));
             response.setHeader("Location", uriInfo.getBaseUriBuilder()
                     .path(MovieController.class, "getMovie")
                     .build(id)
                     .toString());
             throw new WebApplicationException(Response.Status.CREATED);
         }
-        catch (TransactionalException ex) {
+        catch (EJBException ex) {
             if (ex.getCause() instanceof IllegalArgumentException) {
                 log.log(Level.WARNING, ex.getMessage(), ex);
                 throw new BadRequestException(ex);
@@ -96,7 +103,14 @@ public class MovieRestController implements MovieController {
     @Override
     public void patchMovie(UUID directorId, UUID id, PatchMovieRequest request) {
         service.find(id).ifPresentOrElse(
-                entity -> service.update(factory.updateMovie().apply(entity, request)),
+                entity -> {
+                    try {
+                        service.update(factory.updateMovie().apply(entity, request));
+                    } catch (EJBAccessException ex) {
+                        log.log(Level.WARNING, ex.getMessage(), ex);
+                        throw new ForbiddenException(ex.getMessage());
+                    }
+                },
                 () -> {
                     throw new NotFoundException();
                 }
@@ -106,7 +120,14 @@ public class MovieRestController implements MovieController {
     @Override
     public void deleteMovie(UUID id) {
         service.find(id).ifPresentOrElse(
-                entity -> service.delete(id),
+                entity -> {
+                    try {
+                        service.delete(id);
+                    } catch (EJBAccessException ex) {
+                        log.log(Level.WARNING, ex.getMessage(), ex);
+                        throw new ForbiddenException(ex.getMessage());
+                    }
+                },
                 () -> {
                     throw new NotFoundException();
                 }

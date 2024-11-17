@@ -1,5 +1,7 @@
 package pg.eti.jee.director.controller.rest;
 
+import jakarta.annotation.security.RolesAllowed;
+import jakarta.ejb.EJB;
 import jakarta.inject.Inject;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.ws.rs.BadRequestException;
@@ -16,16 +18,14 @@ import pg.eti.jee.director.dto.GetDirectorsResponse;
 import pg.eti.jee.director.dto.PatchDirectorRequest;
 import pg.eti.jee.director.dto.PutDirectorRequest;
 import pg.eti.jee.director.service.DirectorService;
-import pg.eti.jee.movie.controller.api.MovieController;
-import pg.eti.jee.movie.dto.PatchMovieRequest;
-import pg.eti.jee.movie.dto.PutMovieRequest;
+import pg.eti.jee.user.entity.UserRoles;
 
 import java.util.UUID;
 
 @Path("")
 public class DirectorRestController implements DirectorController {
 
-    private final DirectorService service;
+    private DirectorService service;
 
     private final DtoFunctionFactory factory;
 
@@ -39,11 +39,15 @@ public class DirectorRestController implements DirectorController {
     }
 
     @Inject
-    public DirectorRestController(DirectorService service, DtoFunctionFactory factory,
+    public DirectorRestController(DtoFunctionFactory factory,
                                   @SuppressWarnings("CdiInjectionPointsInspection") UriInfo uriInfo) {
-        this.service = service;
         this.factory = factory;
         this.uriInfo = uriInfo;
+    }
+
+    @EJB
+    public void setService(DirectorService service) {
+        this.service = service;
     }
 
     @Override
@@ -83,6 +87,7 @@ public class DirectorRestController implements DirectorController {
         );
     }
 
+    @RolesAllowed(UserRoles.ADMIN)
     @Override
     public void deleteDirector(UUID id) {
         service.find(id).ifPresentOrElse(
