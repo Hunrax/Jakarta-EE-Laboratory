@@ -1,4 +1,57 @@
 # @no-cookie-jar
+GET http://localhost:9080/jeelab/api/movies/7d1da2ae-1234-2345-1234-d117867118e3
+Authorization: Basic student Pawel123
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+###
+
+# @no-cookie-jar
+GET http://localhost:9080/jeelab/api/movies/7d1da2ae-1234-2345-1234-d117867118e3
+Authorization: Basic admin admin
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-11-20T201201.200.json
+
+###
+
+# @no-cookie-jar
+GET http://localhost:9080/jeelab/api/movies
+Authorization: Basic admin admin
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-11-20T201150.200.json
+
+###
+
+# @no-cookie-jar
+GET http://localhost:9080/jeelab/api/movies/7d1da2ae-1234-2345-1234-d117867118e3
+Authorization: Basic admin admin
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-11-20T201140.200.json
+
+###
+
+# @no-cookie-jar
+GET http://localhost:9080/jeelab/api/movies
+Authorization: Basic admin admin
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.8.1)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2024-11-20T201129.200.json
+
+###
+
+# @no-cookie-jar
 GET http://localhost:9080/jeelab/api/movies
 Authorization: Basic student Pawel123
 Connection: Keep-Alive
@@ -532,24 +585,6 @@ Accept-Encoding: br, deflate, gzip, x-gzip
 Accept: */*
 
 <> 2024-11-19T131909.200.json
-
-###
-
-# @no-cookie-jar
-PUT http://localhost:9080/jeelab/api/directors/6d6f1eb1-1234-2345-1234-d7fed2b65d87
-Authorization: Basic admin admin
-Content-Type: application/json
-Content-Length: 94
-User-Agent: IntelliJ HTTP Client/IntelliJ IDEA 2024.3
-Accept-Encoding: br, deflate, gzip, x-gzip
-Accept: */*
-
-{
-  "birthDate": "2001-10-15",
-  "name": "Nowy",
-  "oscarAwards": 10,
-  "surname": "Rezyser"
-}
 
 ###
 

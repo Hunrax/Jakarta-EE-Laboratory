@@ -1,5 +1,6 @@
 package pg.eti.jee.movie.view;
 
+import jakarta.ejb.EJB;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
@@ -11,21 +12,25 @@ import pg.eti.jee.movie.service.MovieService;
 @Named
 public class MovieList {
 
-    private final MovieService service;
+    private MovieService service;
 
     private MoviesModel movies;
 
     private final ModelFunctionFactory factory;
 
     @Inject
-    public MovieList(MovieService service, ModelFunctionFactory factory) {
-        this.service = service;
+    public MovieList(ModelFunctionFactory factory) {
         this.factory = factory;
+    }
+
+    @EJB
+    public void setService(MovieService service) {
+        this.service = service;
     }
 
     public MoviesModel getMovies() {
         if (movies == null) {
-            movies = factory.moviesToModel().apply(service.findAll());
+            movies = factory.moviesToModel().apply(service.findAllForCallerPrincipal());
         }
         return movies;
     }

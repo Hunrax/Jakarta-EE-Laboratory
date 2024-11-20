@@ -12,6 +12,7 @@ import pg.eti.jee.director.model.DirectorModel;
 import pg.eti.jee.director.service.DirectorService;
 import pg.eti.jee.movie.model.MovieCreateModel;
 import pg.eti.jee.movie.service.MovieService;
+import jakarta.ejb.EJB;
 
 import java.io.Serializable;
 import java.util.List;
@@ -24,9 +25,9 @@ import java.util.stream.Collectors;
 @NoArgsConstructor(force = true)
 public class MovieCreate implements Serializable {
 
-    private final MovieService movieService;
+    private MovieService movieService;
 
-    private final DirectorService directorService;
+    private DirectorService directorService;
 
     private final ModelFunctionFactory factory;
 
@@ -39,16 +40,19 @@ public class MovieCreate implements Serializable {
     private final Conversation conversation;
 
     @Inject
-    public MovieCreate(
-            MovieService movieService,
-            DirectorService directorService,
-            ModelFunctionFactory factory,
-            Conversation conversation
-    ) {
-        this.movieService = movieService;
+    public MovieCreate(ModelFunctionFactory factory, Conversation conversation) {
         this.factory = factory;
-        this.directorService = directorService;
         this.conversation = conversation;
+    }
+
+    @EJB
+    public void setCharacterService(MovieService movieService) {
+        this.movieService = movieService;
+    }
+
+    @EJB
+    public void setProfessionService(DirectorService directorService) {
+        this.directorService = directorService;
     }
 
     public void init() {
@@ -81,7 +85,7 @@ public class MovieCreate implements Serializable {
     }
 
     public String saveAction() {
-        movieService.create(factory.modelToMovie().apply(movie));
+        movieService.createForCallerPrincipal(factory.modelToMovie().apply(movie));
         conversation.end();
         return "/movie/movie_list.xhtml?faces-redirect=true";
     }

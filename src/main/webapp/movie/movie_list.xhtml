@@ -19,14 +19,14 @@
 
                 <h:column>
                     <f:facet name="header">View</f:facet>
-                    <h:link outcome="/movie/movie_view.xhtml" value="View">
+                    <h:link outcome="/movie/movie_view.xhtml" value="View" styleClass="btn btn-primary">
                         <f:param name="id" value="#{movie.id}"/>
                     </h:link>
                 </h:column>
 
                 <h:column>
                     <f:facet name="header">Edit</f:facet>
-                    <h:link outcome="/movie/movie_edit.xhtml" value="Edit">
+                    <h:link outcome="/movie/movie_edit.xhtml" value="Edit" styleClass="btn btn-primary">
                         <f:param name="id" value="#{movie.id}"/>
                     </h:link>
                 </h:column>
@@ -34,13 +34,13 @@
                 <h:column>
                     <f:facet name="header">Delete</f:facet>
                     <h:form>
-                        <h:commandButton styleClass="btn" value="Delete"
+                        <h:commandButton styleClass="btn btn-danger" value="Delete"
                                          action="#{movieList.deleteAction(movie)}"/>
                     </h:form>
                 </h:column>
 
                 <f:facet name="footer">
-                    <h:button styleClass="btn" outcome="/movie/movie_create__basic.xhtml"
+                    <h:button styleClass="btn btn-success" outcome="/movie/movie_create__basic.xhtml"
                               value="Create new movie"/>
                 </f:facet>
             </h:dataTable>

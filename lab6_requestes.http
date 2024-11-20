@@ -178,5 +178,21 @@ Authorization: Basic student Pawel123
 
 ###
 
+# Get specific movie (Admin).
+
+// @no-cookie-jar
+GET http://localhost:9080/jeelab/api/movies/7d1da2ae-1234-2345-1234-d117867118e3
+Authorization: Basic admin admin
+
+###
+
+# Get specific movie (User).
+
+// @no-cookie-jar
+GET http://localhost:9080/jeelab/api/movies/7d1da2ae-1234-2345-1234-d117867118e3
+Authorization: Basic student Pawel123
+
+###
+
 
 

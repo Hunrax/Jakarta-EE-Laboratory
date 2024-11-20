@@ -3,6 +3,8 @@ package pg.eti.jee.component;
 import jakarta.enterprise.context.ApplicationScoped;
 import pg.eti.jee.director.model.function.*;
 import pg.eti.jee.movie.model.function.*;
+import pg.eti.jee.user.model.function.UserToModelFunction;
+import pg.eti.jee.user.model.function.UsersToModelFunction;
 
 @ApplicationScoped
 public class ModelFunctionFactory {
@@ -16,7 +18,7 @@ public class ModelFunctionFactory {
     }
 
     public MovieToEditModelFunction movieToEditModel() {
-        return new MovieToEditModelFunction();
+        return new MovieToEditModelFunction(userToModel());
     }
 
     public ModelToMovieFunction modelToMovie() {
@@ -47,4 +49,6 @@ public class ModelFunctionFactory {
         return new UpdateDirectorWithModelFunction();
     }
 
+    public UserToModelFunction userToModel() { return new UserToModelFunction(); }
+    public UsersToModelFunction usersToModel() { return new UsersToModelFunction(); }
 }

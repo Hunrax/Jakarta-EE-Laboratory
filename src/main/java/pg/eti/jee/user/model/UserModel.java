@@ -1,4 +1,4 @@
-package pg.eti.jee.movie.model;
+package pg.eti.jee.user.model;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -8,9 +8,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
-import pg.eti.jee.user.model.UserModel;
 
-import java.time.LocalDate;
+import java.util.UUID;
 
 @Getter
 @Setter
@@ -19,13 +18,10 @@ import java.time.LocalDate;
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @ToString
 @EqualsAndHashCode
-public class MovieEditModel {
+public class UserModel {
 
-    private String title;
+    private UUID id;
 
-    private int runningTime;
+    private String login;
 
-    private LocalDate releaseDate;
-
-    private UserModel user;
 }
