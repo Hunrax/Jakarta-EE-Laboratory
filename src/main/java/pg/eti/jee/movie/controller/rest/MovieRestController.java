@@ -57,7 +57,7 @@ public class MovieRestController implements MovieController {
 
     @Override
     public GetMoviesResponse getMovies() {
-        return factory.moviesToResponse().apply(service.findAll());
+        return factory.moviesToResponse().apply(service.findAllForCallerPrincipal());
     }
 
     @Override
@@ -76,7 +76,7 @@ public class MovieRestController implements MovieController {
 
     @Override
     public GetMovieResponse getMovie(UUID uuid) {
-        return service.find(uuid)
+        return service.findForCallerPrincipal(uuid)
                 .map(factory.movieToResponse())
                 .orElseThrow(NotFoundException::new);
     }
@@ -102,7 +102,7 @@ public class MovieRestController implements MovieController {
 
     @Override
     public void patchMovie(UUID directorId, UUID id, PatchMovieRequest request) {
-        service.find(id).ifPresentOrElse(
+        service.findForCallerPrincipal(id).ifPresentOrElse(
                 entity -> {
                     try {
                         service.update(factory.updateMovie().apply(entity, request));
@@ -119,7 +119,7 @@ public class MovieRestController implements MovieController {
 
     @Override
     public void deleteMovie(UUID id) {
-        service.find(id).ifPresentOrElse(
+        service.findForCallerPrincipal(id).ifPresentOrElse(
                 entity -> {
                     try {
                         service.delete(id);

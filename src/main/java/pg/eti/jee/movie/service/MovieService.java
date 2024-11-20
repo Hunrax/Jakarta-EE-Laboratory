@@ -41,7 +41,6 @@ public class MovieService {
     }
     @RolesAllowed(UserRoles.USER)
     public Optional<Movie> find(UUID id) {
-        checkAdminRoleOrOwner(movieRepository.find(id));
         return movieRepository.find(id);
     }
 
@@ -60,7 +59,7 @@ public class MovieService {
         return find(user, id);
     }
 
-    @RolesAllowed(UserRoles.ADMIN)
+    @RolesAllowed(UserRoles.USER)
     public List<Movie> findAll() {
         return movieRepository.findAll();
     }

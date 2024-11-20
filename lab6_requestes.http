@@ -61,14 +61,6 @@ Authorization: Basic admin admin
 
 ###
 
-# Get user movies
-
-// @no-cookie-jar
-GET http://localhost:9080/jeelab/api/users/f5875513-bf7b-4ae1-b8a5-5b70a1b90e76/movies
-Authorization: Basic student Pawel123
-
-###
-
 # Get all users (admin).
 
 // @no-cookie-jar
@@ -178,12 +170,13 @@ Authorization: Basic admin admin
 
 ###
 
-# Get user movies
+# Get all movies (User).
 
 // @no-cookie-jar
-GET http://localhost:9080/jeelab/api/users/f5875513-bf7b-4ae1-b8a5-5b70a1b90e76/movies
+GET http://localhost:9080/jeelab/api/movies
 Authorization: Basic student Pawel123
 
 ###
+
 
 
