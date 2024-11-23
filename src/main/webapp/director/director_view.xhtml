@@ -11,6 +11,8 @@
     </f:metadata>
 
     <ui:define name="content">
+        <f:loadBundle var="msg" basename="pg.eti.jee.directors.view.i18n.messages"/>
+        <f:loadBundle var="movieMsg" basename="pg.eti.jee.movies.view.i18n.messages"/>
         <article>
             <header><h2><h:outputText value="#{directorView.director.name} #{directorView.director.surname}"/></h2></header>
             <div class="container">
@@ -19,7 +21,7 @@
 
                         <div class="row mb-2">
                             <div class="col-6">
-                                Name
+                                #{msg.name}
                             </div>
                             <div class="col-6">
                                 <h:outputText value="#{directorView.director.name}"/>
@@ -28,7 +30,7 @@
 
                         <div class="row mb-2">
                             <div class="col-6">
-                                Surname
+                                #{msg.surname}
                             </div>
                             <div class="col-6">
                                 <h:outputText value="#{directorView.director.surname}"/>
@@ -37,7 +39,7 @@
 
                         <div class="row mb-2">
                             <div class="col-6">
-                                Birth Date
+                                #{msg.birthDate}
                             </div>
                             <div class="col-6">
                                 <h:outputText value="#{directorView.director.birthDate}"/>
@@ -46,7 +48,7 @@
 
                         <div class="row mb-2">
                             <div class="col-6">
-                                Oscars won
+                                #{msg.oscarsWon}
                             </div>
                             <div class="col-6">
                                 <h:outputText value="#{directorView.director.oscarAwards}"/>
@@ -58,35 +60,35 @@
                                      styleClass="table align-middle mb-0 bg-white" headerClass="bg-light">
 
                             <h:column>
-                                <f:facet name="header">Title</f:facet>
+                                <f:facet name="header">#{movieMsg.title}</f:facet>
                                 <h:outputText value="#{movie.title}"/>
                             </h:column>
 
                             <h:column>
-                                <f:facet name="header">View</f:facet>
-                                <h:link outcome="/movie/movie_view.xhtml" value="View">
+                                <f:facet name="header">#{movieMsg.view}</f:facet>
+                                <h:link outcome="/movie/movie_view.xhtml" value="#{movieMsg.view}" styleClass="btn btn-primary">
                                     <f:param name="id" value="#{movie.id}"/>
                                 </h:link>
                             </h:column>
 
                             <h:column>
-                                <f:facet name="header">Edit</f:facet>
-                                <h:link outcome="/movie/movie_edit.xhtml" value="Edit">
+                                <f:facet name="header">#{movieMsg.edit}</f:facet>
+                                <h:link outcome="/movie/movie_edit.xhtml" value="#{movieMsg.edit}" styleClass="btn btn-primary">
                                     <f:param name="id" value="#{movie.id}"/>
                                 </h:link>
                             </h:column>
 
                             <h:column>
-                                <f:facet name="header">Delete</f:facet>
+                                <f:facet name="header">#{movieMsg.delete}</f:facet>
                                 <h:form>
-                                    <h:commandButton styleClass="btn" value="Delete"
+                                    <h:commandButton styleClass="btn btn-danger" value="#{movieMsg.delete}"
                                                      action="#{directorView.deleteDirectorsMovieAction(movie)}"/>
                                 </h:form>
                             </h:column>
 
                             <f:facet name="footer">
-                                <h:button styleClass="btn" outcome="/movie/movie_create__basic.xhtml"
-                                          value="Create new movie"/>
+                                <h:button styleClass="btn btn-success" outcome="/movie/movie_create__basic.xhtml"
+                                          value="#{movieMsg.createMovie}"/>
                             </f:facet>
                         </h:dataTable>
                     </div>

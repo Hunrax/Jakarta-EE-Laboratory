@@ -13,7 +13,7 @@ public class DirectorList {
 
     private final DirectorService service;
 
-    private DirectorsModel movies;
+    private DirectorsModel directors;
 
     private final ModelFunctionFactory factory;
 
@@ -24,15 +24,15 @@ public class DirectorList {
     }
 
     public DirectorsModel getDirectors() {
-        if (movies == null) {
-            movies = factory.directorsToModel().apply(service.findAll());
+        if (directors == null) {
+            directors = factory.directorsToModel().apply(service.findAll());
         }
-        return movies;
+        return directors;
     }
 
-    public String deleteAction(DirectorsModel.Director director) {
+    public void deleteAction(DirectorsModel.Director director) {
         service.delete(director.getId());
-        return "director_list?faces-redirect=true";
+        directors = null;
     }
 
 }

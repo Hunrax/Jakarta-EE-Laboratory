@@ -65,3 +65,7 @@ nav {
     background-color: #50545c;
     color: #ffffff;
 }
+
+.form-control {
+    color: white !important;
+}

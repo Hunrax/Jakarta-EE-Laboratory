@@ -15,6 +15,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.SneakyThrows;
 import lombok.extern.java.Log;
+import pg.eti.jee.movie.model.MoviesModel;
 
 import static jakarta.security.enterprise.authentication.mechanism.http.AuthenticationParameters.withParams;
 
@@ -58,5 +59,9 @@ public class UserLogin {
 
     private HttpServletResponse extractResponseFromFacesContext() {
         return (HttpServletResponse) facesContext.getExternalContext().getResponse();
+    }
+
+    public String goToLogin() {
+        return "login?faces-redirect=true";
     }
 }

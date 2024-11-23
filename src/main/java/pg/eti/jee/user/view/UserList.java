@@ -30,8 +30,8 @@ public class UserList {
         return users;
     }
 
-    public String deleteAction(UsersModel.User user) {
+    public void deleteAction(UsersModel.User user) {
         service.delete(user.getId());
-        return "user_list?faces-redirect=true";
+        users = null;
     }
 }

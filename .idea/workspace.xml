@@ -5,23 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1062867-b09b-4876-8660-9ebbca59023f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab6_requestes.http" beforeDir="false" afterPath="$PROJECT_DIR$/lab6_requestes.http" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/component/ModelFunctionFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/component/ModelFunctionFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/model/MovieEditModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/model/MovieEditModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/model/function/MovieToEditModelFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/model/function/MovieToEditModelFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/model/function/UpdateMovieWithModelFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/model/function/UpdateMovieWithModelFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/view/MovieCreate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/view/MovieCreate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/view/MovieEdit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/view/MovieEdit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/authentication/config/AuthenticationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/authentication/config/AuthenticationConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/director/view/DirectorList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/director/view/DirectorList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/view/MovieList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/view/MovieList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/view/MovieView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/view/MovieView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/user/view/UserList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/user/view/UserList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/user/view/UserLogin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/user/view/UserLogin.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/template/main.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/template/main.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/authentication/custom/login.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/authentication/custom/login.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/authentication/custom/login_error.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/authentication/custom/login_error.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/director/director_create__basic.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/director/director_create__basic.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/director/director_create__confirm.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/director/director_create__confirm.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/director/director_edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/director/director_edit.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/director/director_list.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/director/director_list.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/director/director_view.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/director/director_view.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/movie/movie_create__basic.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/movie/movie_create__basic.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/movie/movie_create__confirm.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/movie/movie_create__confirm.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/movie/movie_create__director.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/movie/movie_create__director.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/movie/movie_edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/movie/movie_edit.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/movie/movie_list.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/movie/movie_list.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/movie/movie_view.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/movie/movie_view.xhtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/default/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/default/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/user/user_list.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/user/user_list.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,50 +56,55 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "HTTP Request.lab6_requestes | #1.executor": "Run",
-    "HTTP Request.lab6_requestes | #10.executor": "Run",
-    "HTTP Request.lab6_requestes | #11.executor": "Run",
-    "HTTP Request.lab6_requestes | #12.executor": "Run",
-    "HTTP Request.lab6_requestes | #13.executor": "Run",
-    "HTTP Request.lab6_requestes | #14.executor": "Run",
-    "HTTP Request.lab6_requestes | #15.executor": "Run",
-    "HTTP Request.lab6_requestes | #16.executor": "Run",
-    "HTTP Request.lab6_requestes | #17.executor": "Run",
-    "HTTP Request.lab6_requestes | #18.executor": "Run",
-    "HTTP Request.lab6_requestes | #19.executor": "Run",
-    "HTTP Request.lab6_requestes | #2.executor": "Run",
-    "HTTP Request.lab6_requestes | #3.executor": "Run",
-    "HTTP Request.lab6_requestes | #4.executor": "Run",
-    "HTTP Request.lab6_requestes | #6.executor": "Run",
-    "HTTP Request.lab6_requestes | #7.executor": "Run",
-    "HTTP Request.lab6_requestes | #8.executor": "Run",
-    "HTTP Request.lab6_requestes | #9.executor": "Run",
-    "Maven.jeelab [io.openliberty.tools:liberty-maven-plugin:3.7.1:dev].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Radek/Desktop/Jakarta-EE-Laboratory/src/main/webapp/resources",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;HTTP Request.lab6_requestes | #1.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.lab6_requestes | #10.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.lab6_requestes | #11.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.lab6_requestes | #12.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.lab6_requestes | #13.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.lab6_requestes | #14.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.lab6_requestes | #15.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.lab6_requestes | #16.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.lab6_requestes | #17.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.lab6_requestes | #18.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.lab6_requestes | #19.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.lab6_requestes | #2.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.lab6_requestes | #3.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.lab6_requestes | #4.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.lab6_requestes | #6.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.lab6_requestes | #7.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.lab6_requestes | #8.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.lab6_requestes | #9.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.jeelab [io.openliberty.tools:liberty-maven-plugin:3.7.1:dev].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Radek/Desktop/Jakarta-EE-Laboratory/src/main/resources/pg/eti/jee/directors/view/i18n&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Radek\Desktop\Jakarta-EE-Laboratory\src\main\webapp\resources" />
-      <recent name="C:\Users\Radek\Desktop\Jakarta-EE-Laboratory\src\main\webapp" />
-      <recent name="C:\Users\Radek\Desktop\Jakarta-EE-Laboratory\src\main\webapp\authentication\custom" />
-      <recent name="C:\Users\Radek\Desktop\Jakarta-EE-Laboratory\src\main\java\pg\eti\jee\user" />
+      <recent name="C:\Users\Radek\Desktop\Jakarta-EE-Laboratory\src\main\resources\pg\eti\jee\directors\view\i18n" />
+      <recent name="C:\Users\Radek\Desktop\Jakarta-EE-Laboratory\src\main\resources\pg\eti\jee\users\view\i18n" />
+      <recent name="C:\Users\Radek\Desktop\Jakarta-EE-Laboratory\src\main\resources\pg\eti\jee\movies\view\i18n" />
+      <recent name="C:\Users\Radek\Desktop\Jakarta-EE-Laboratory\src\main\resources\pg\eti\jee\home\view\i18n" />
+      <recent name="C:\Users\Radek\Desktop\Jakarta-EE-Laboratory\src\main\resources\pg\eti\jee\configuration" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Radek\Desktop\Jakarta-EE-Laboratory\src\main\resources\pg\eti\jee\view" />
+      <recent name="C:\Users\Radek\Desktop\Jakarta-EE-Laboratory\src\main\resources\pg\eti\jee\authentication\view" />
+      <recent name="C:\Users\Radek\Desktop\Jakarta-EE-Laboratory\src\main\resources\pg\eti\jee\configuration\" />
+      <recent name="C:\Users\Radek\Desktop\Jakarta-EE-Laboratory\src\main\resources\pg\eti\jee\configuration" />
       <recent name="C:\Users\Radek\Desktop\Jakarta-EE-Laboratory\src\main\webapp\authentication" />
     </key>
   </component>
@@ -142,6 +153,10 @@
       <workItem from="1732018597303" duration="5116000" />
       <workItem from="1732055501020" duration="110000" />
       <workItem from="1732126254809" duration="4993000" />
+      <workItem from="1732307978723" duration="3765000" />
+      <workItem from="1732364319269" duration="238000" />
+      <workItem from="1732364640838" duration="5590000" />
+      <workItem from="1732371276580" duration="1710000" />
     </task>
     <servers />
   </component>

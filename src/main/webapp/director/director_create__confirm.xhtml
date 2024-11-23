@@ -10,16 +10,17 @@
     </f:metadata>
 
     <ui:define name="content">
+        <f:loadBundle var="msg" basename="pg.eti.jee.directors.view.i18n.messages"/>
         <article>
-            <header><h2>Create new director</h2></header>
+            <header><h2>#{msg.createDirector}</h2></header>
             <h:form styleClass="container" onreset="onReset()" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-2 p-2 text-center">
-                        <h:commandButton styleClass="btn" value="Previous" immediate="true"
+                        <h:commandButton styleClass="btn btn-secondary" value="#{msg.previous}" immediate="true"
                                          action="#{directorCreate.goToBasicAction()}"/>
                     </div>
                     <div class="col-2 p-2 text-center">
-                        <h:button styleClass="btn" value="Next" disabled="true"/>
+                        <h:button styleClass="btn btn-primary" value="#{msg.next}" disabled="true"/>
                     </div>
                 </div>
 
@@ -27,7 +28,7 @@
                     <div class="col-4">
                         <div class="row mb-2">
                             <div class="col-6">
-                                Name
+                                #{msg.name}
                             </div>
                             <div class="col-6">
                                 <h:outputText value="#{directorCreate.director.name}"/>
@@ -36,7 +37,7 @@
 
                         <div class="row mb-2">
                             <div class="col-6">
-                                Surname
+                                #{msg.surname}
                             </div>
                             <div class="col-6">
                                 <h:outputText value="#{directorCreate.director.surname}"/>
@@ -45,7 +46,7 @@
 
                         <div class="row mb-2">
                             <div class="col-6">
-                                Birth Date
+                                #{msg.birthDate}
                             </div>
                             <div class="col-6">
                                 <h:outputText value="#{directorCreate.director.birthDate}"/>
@@ -54,7 +55,7 @@
 
                         <div class="row mb-2">
                             <div class="col-6">
-                                Oscars Won
+                                #{msg.oscarsWon}
                             </div>
                             <div class="col-6">
                                 <h:outputText value="#{directorCreate.director.oscarAwards}"/>
@@ -65,11 +66,11 @@
 
                 <div class="row">
                     <div class="col-2 p-2 text-center">
-                        <h:commandButton styleClass="btn btn-primary" value="Create"
+                        <h:commandButton styleClass="btn btn-primary" value="#{msg.create}"
                                          action="#{directorCreate.saveAction()}"/>
                     </div>
                     <div class="col-2 p-2 text-center">
-                        <h:commandButton styleClass="btn btn-secondary" value="Cancel"
+                        <h:commandButton styleClass="btn btn-secondary" value="#{msg.cancel}"
                                          action="#{directorCreate.cancelAction()}"/>
                     </div>
                 </div>

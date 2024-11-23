@@ -6,13 +6,14 @@
                 template="/WEB-INF/template/main.xhtml">
 
     <ui:define name="content">
+        <f:loadBundle var="msg" basename="pg.eti.jee.home.view.i18n.messages"/>
         <article class="">
             <header>
-                <h2>Home</h2>
+                <h2>#{msg.homePage}</h2>
             </header>
             <section>
-                <p>JAKARTA EE LABORATORY 2024</p>
-                <p>TOPIC: DIRECTORS AND THEIR MOVIES</p>
+                <p>#{msg.lab}</p>
+                <p>#{msg.topic}</p>
             </section>
         </article>
     </ui:define>

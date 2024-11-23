@@ -11,6 +11,7 @@
     </f:metadata>
 
     <ui:define name="content">
+        <f:loadBundle var="msg" basename="pg.eti.jee.movies.view.i18n.messages"/>
         <article>
             <header><h2><h:outputText value="#{movieView.movie.title}"/></h2></header>
             <div class="container">
@@ -19,7 +20,7 @@
 
                         <div class="row mb-2">
                             <div class="col-6">
-                                Running Time
+                                #{msg.runningTime}
                             </div>
                             <div class="col-6">
                                 <h:outputText value="#{movieView.movie.runningTime}"/>
@@ -28,7 +29,7 @@
 
                         <div class="row mb-2">
                             <div class="col-6">
-                                Release Date
+                                #{msg.releaseDate}
                             </div>
                             <div class="col-6">
                                 <h:outputText value="#{movieView.movie.releaseDate}"/>
@@ -37,7 +38,7 @@
 
                         <div class="row mb-2">
                             <div class="col-6">
-                                Director
+                                #{msg.director}
                             </div>
                             <div class="col-6">
                                 <h:outputText value="#{movieView.movie.director.name} #{movieView.movie.director.surname}"/>

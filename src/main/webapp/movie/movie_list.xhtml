@@ -6,42 +6,45 @@
                 template="/WEB-INF/template/main.xhtml">
 
     <ui:define name="content">
+        <f:loadBundle var="msg" basename="pg.eti.jee.movies.view.i18n.messages"/>
         <article class="text--justified">
-            <header><h2>Movies</h2></header>
+            <header><h2>#{msg.movies}</h2></header>
 
-            <h:dataTable value="#{movieList.movies.movies}" var="movie"
+            <h:dataTable id="moviesTable" value="#{movieList.movies.movies}" var="movie"
                          styleClass="table align-middle mb-0 bg-white" headerClass="bg-light">
 
                 <h:column>
-                    <f:facet name="header">Title</f:facet>
+                    <f:facet name="header">#{msg.title}</f:facet>
                     <h:outputText value="#{movie.title}"/>
                 </h:column>
 
                 <h:column>
-                    <f:facet name="header">View</f:facet>
-                    <h:link outcome="/movie/movie_view.xhtml" value="View" styleClass="btn btn-primary">
+                    <f:facet name="header">#{msg.view}</f:facet>
+                    <h:link outcome="/movie/movie_view.xhtml" value="#{msg.view}" styleClass="btn btn-primary">
                         <f:param name="id" value="#{movie.id}"/>
                     </h:link>
                 </h:column>
 
                 <h:column>
-                    <f:facet name="header">Edit</f:facet>
-                    <h:link outcome="/movie/movie_edit.xhtml" value="Edit" styleClass="btn btn-primary">
+                    <f:facet name="header">#{msg.edit}</f:facet>
+                    <h:link outcome="/movie/movie_edit.xhtml" value="#{msg.edit}" styleClass="btn btn-primary">
                         <f:param name="id" value="#{movie.id}"/>
                     </h:link>
                 </h:column>
 
                 <h:column>
-                    <f:facet name="header">Delete</f:facet>
+                    <f:facet name="header">#{msg.delete}</f:facet>
                     <h:form>
-                        <h:commandButton styleClass="btn btn-danger" value="Delete"
-                                         action="#{movieList.deleteAction(movie)}"/>
+                        <h:commandButton styleClass="btn btn-danger" value="#{msg.delete}"
+                                         action="#{movieList.deleteAction(movie)}">
+                            <f:ajax execute="@this" render=":moviesTable"/>
+                        </h:commandButton>
                     </h:form>
                 </h:column>
 
                 <f:facet name="footer">
                     <h:button styleClass="btn btn-success" outcome="/movie/movie_create__basic.xhtml"
-                              value="Create new movie"/>
+                              value="#{msg.createMovie}"/>
                 </f:facet>
             </h:dataTable>
         </article>

@@ -35,9 +35,9 @@ public class MovieList {
         return movies;
     }
 
-    public String deleteAction(MoviesModel.Movie movie) {
+    public void deleteAction(MoviesModel.Movie movie) {
         service.delete(movie.getId());
-        return "movie_list?faces-redirect=true";
+        movies = null;
     }
 
 }

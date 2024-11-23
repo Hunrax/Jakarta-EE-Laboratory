@@ -10,16 +10,17 @@
     </f:metadata>
 
     <ui:define name="content">
+        <f:loadBundle var="msg" basename="pg.eti.jee.movies.view.i18n.messages"/>
         <article>
-            <header><h2>Create new movie</h2></header>
+            <header><h2>#{msg.createMovie}</h2></header>
             <h:form styleClass="container" onreset="onReset()" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-2 p-2 text-center">
-                        <h:commandButton styleClass="btn" value="Previous" immediate="true"
+                        <h:commandButton styleClass="btn btn-secondary" value="#{msg.previous}" immediate="true"
                                          action="#{movieCreate.goToBasicAction()}"/>
                     </div>
                     <div class="col-2 p-2 text-center">
-                        <h:commandButton styleClass="btn" value="Next"
+                        <h:commandButton styleClass="btn btn-primary" value="#{msg.next}"
                                          action="#{movieCreate.goToConfirmAction()}"/>
                     </div>
                 </div>
@@ -27,7 +28,7 @@
                 <div class="row">
                     <div class="col-4 p-2">
                         <fieldset>
-                            <legend class="form-label fs-6">Director:</legend>
+                            <legend class="form-label fs-6">#{msg.director}:</legend>
                             <ui:repeat value="#{movieCreate.directors}" var="director">
                                 <div class="form-check">
                                     <h:selectOneRadio id="radioId" group="director"
@@ -44,10 +45,10 @@
 
                 <div class="row">
                     <div class="col-2 p-2 text-center">
-                        <h:button styleClass="btn btn-primary" value="Create" disabled="true"/>
+                        <h:button styleClass="btn btn-primary" value="#{msg.create}" disabled="true"/>
                     </div>
                     <div class="col-2 p-2 text-center">
-                        <h:commandButton styleClass="btn btn-secondary" value="Cancel"
+                        <h:commandButton styleClass="btn btn-secondary" value="#{msg.cancel}"
                                          action="#{movieCreate.cancelAction()}"/>
                     </div>
                 </div>

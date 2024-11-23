@@ -10,16 +10,17 @@
     </f:metadata>
 
     <ui:define name="content">
+        <f:loadBundle var="msg" basename="pg.eti.jee.movies.view.i18n.messages"/>
         <article>
-            <header><h2>Create new movie</h2></header>
+            <header><h2>#{msg.createMovie}</h2></header>
             <h:form styleClass="container" onreset="onReset()" enctype="multipart/form-data">
                 <div class="row">
                     <div class="col-2 p-2 text-center">
-                        <h:commandButton styleClass="btn" value="Previous" immediate="true"
+                        <h:commandButton styleClass="btn btn-secondary" value="#{msg.previous}" immediate="true"
                                          action="#{movieCreate.goToDirectorAction()}"/>
                     </div>
                     <div class="col-2 p-2 text-center">
-                        <h:button styleClass="btn" value="Next" disabled="true"/>
+                        <h:button styleClass="btn btn-primary" value="#{msg.next}" disabled="true"/>
                     </div>
                 </div>
 
@@ -27,7 +28,7 @@
                     <div class="col-4">
                         <div class="row mb-2">
                             <div class="col-6">
-                                Title
+                                #{msg.title}
                             </div>
                             <div class="col-6">
                                 <h:outputText value="#{movieCreate.movie.title}"/>
@@ -36,7 +37,7 @@
 
                         <div class="row mb-2">
                             <div class="col-6">
-                                Release date
+                                #{msg.releaseDate}
                             </div>
                             <div class="col-6">
                                 <h:outputText value="#{movieCreate.movie.releaseDate}"/>
@@ -45,7 +46,7 @@
 
                         <div class="row mb-2">
                             <div class="col-6">
-                                Running time
+                                #{msg.runningTime}
                             </div>
                             <div class="col-6">
                                 <h:outputText value="#{movieCreate.movie.runningTime}"/>
@@ -54,7 +55,7 @@
 
                         <div class="row mb-2">
                             <div class="col-6">
-                                Director
+                                #{msg.director}
                             </div>
                             <div class="col-6">
                                 <h:outputText value="#{movieCreate.movie.director.name} #{movieCreate.movie.director.surname}"/>
@@ -65,11 +66,11 @@
 
                 <div class="row">
                     <div class="col-2 p-2 text-center">
-                        <h:commandButton styleClass="btn btn-primary" value="Create"
+                        <h:commandButton styleClass="btn btn-primary" value="#{msg.create}"
                                          action="#{movieCreate.saveAction()}"/>
                     </div>
                     <div class="col-2 p-2 text-center">
-                        <h:commandButton styleClass="btn btn-secondary" value="Cancel"
+                        <h:commandButton styleClass="btn btn-secondary" value="#{msg.cancel}"
                                          action="#{movieCreate.cancelAction()}"/>
                     </div>
                 </div>
