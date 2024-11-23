@@ -9,6 +9,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import pg.eti.jee.director.model.DirectorModel;
+import pg.eti.jee.user.model.UserModel;
 
 import java.time.LocalDate;
 import java.util.UUID;
@@ -29,6 +30,8 @@ public class MovieCreateModel {
     private int runningTime;
 
     private DirectorModel director;
+
+    private UserModel user;
 
     private LocalDate releaseDate;
 }

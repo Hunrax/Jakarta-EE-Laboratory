@@ -43,8 +43,8 @@
                 </h:column>
 
                 <f:facet name="footer">
-                    <h:button styleClass="btn btn-success" outcome="/director/director_create__basic.xhtml"
-                              value="#{msg.createDirector}"/>
+                    <h:button  styleClass="btn btn-success" outcome="/director/director_create__basic.xhtml"
+                              value="#{msg.createDirector}" rendered="#{facesContext.externalContext.isUserInRole('admin')}"/>
                 </f:facet>
             </h:dataTable>
         </article>

@@ -23,6 +23,7 @@
         <h:body>
             <div class="container">
                 <header class="header-with-bg mb-4 mt-4">
+                    <h:graphicImage styleClass="flag" library="default" name="flag.png"/>
                 </header>
 
                 <nav class="navbar navbar-expand-lg navbar-light sticky-top">
@@ -47,10 +48,10 @@
                             </h:panelGroup>
                         </ul>
                     </div>
-                    <h:form styleClass="container d-flex  align-items-center justify-content-end"
+                    <h:form styleClass="container d-flex align-items-center justify-content-end"
                             rendered="#{facesContext.externalContext.userPrincipal != null}">
-                        #{messages.logged}: <h:outputText value="#{facesContext.externalContext.userPrincipal.name}"/>
-                        <h:commandButton styleClass="btn btn-link" value="#{messages.logout}"
+                        <span class="me-2">#{messages.logged}: <h:outputText value="#{facesContext.externalContext.userPrincipal.name}"/></span>
+                        <h:commandButton styleClass="btn btn-primary ms-3" value="#{messages.logout}"
                                          action="#{userLogout.logoutAction()}"/>
                     </h:form>
                 </nav>

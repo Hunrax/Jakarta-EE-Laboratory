@@ -51,7 +51,7 @@ public class DirectorView implements Serializable {
         Optional<Director> director = directorService.find(id);
         if (director.isPresent()) {
             this.director = factory.directorToModel().apply(director.get());
-            this.movies = factory.moviesToModel().apply(movieService.findAll().stream()
+            this.movies = factory.moviesToModel().apply(movieService.findAllForCallerPrincipal().stream()
                     .filter(movie -> movie.getDirector() != null && movie.getDirector().getId().equals(id))
                     .toList());
         } else {

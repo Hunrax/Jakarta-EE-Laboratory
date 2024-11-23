@@ -6,7 +6,7 @@
         version="4.0">
     <application>
         <locale-config>
-            <default-locale>pl</default-locale>
+            <default-locale>en</default-locale>
             <supported-locale>en</supported-locale>
             <supported-locale>pl</supported-locale>
         </locale-config>

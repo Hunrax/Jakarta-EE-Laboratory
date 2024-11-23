@@ -2,16 +2,18 @@
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
                 xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
                 xmlns:h="http://xmlns.jcp.org/jsf/html"
+                xmlns:f="jakarta.faces.core"
                 template="/WEB-INF/template/main.xhtml">
 
     <ui:define name="content">
+        <f:loadBundle var="msg" basename="pg.eti.jee.authentication.view.i18n.messages"/>
         <article class="text--justified">
-            <header><h2>Login error</h2></header>
+            <header><h2>#{msg.error}</h2></header>
             <section>
                 <h:form>
                     <div class="row">
                         <div class="col-2 p-2 text-center">
-                            <h:commandButton styleClass="btn btn-secondary" type="submit" value="Try again" action="#{userLogin.goToLogin()}"/>
+                            <h:commandButton styleClass="btn btn-primary" type="submit" value="#{msg.tryAgain}" action="#{userLogin.goToLogin()}"/>
                         </div>
                     </div>
                 </h:form>
