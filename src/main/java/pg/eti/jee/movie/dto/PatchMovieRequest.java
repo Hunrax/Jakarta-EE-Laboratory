@@ -25,4 +25,6 @@ public class PatchMovieRequest {
     private int runningTime;
 
     private LocalDate releaseDate;
+
+    private Long version;
 }

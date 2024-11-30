@@ -23,6 +23,7 @@ public class MovieToEditModelFunction implements Function<Movie, MovieEditModel>
                 .runningTime(entity.getRunningTime())
                 .releaseDate(entity.getReleaseDate())
                 .user(userToModelFunction.apply(entity.getUser()))
+                .version(entity.getVersion())
                 .build();
     }
 

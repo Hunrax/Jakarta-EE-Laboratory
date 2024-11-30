@@ -1,11 +1,15 @@
 package pg.eti.jee.movie.view;
 
 import jakarta.ejb.EJB;
+import jakarta.ejb.EJBException;
+import jakarta.faces.application.FacesMessage;
 import jakarta.faces.context.FacesContext;
 import jakarta.faces.view.ViewScoped;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
+import jakarta.persistence.OptimisticLockException;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.transaction.TransactionalException;
 import lombok.Getter;
 import lombok.Setter;
 import pg.eti.jee.component.ModelFunctionFactory;
@@ -33,9 +37,12 @@ public class MovieEdit implements Serializable {
     @Getter
     private MovieEditModel movie;
 
+    private final FacesContext facesContext;
+
     @Inject
-    public MovieEdit(ModelFunctionFactory factory) {
+    public MovieEdit(ModelFunctionFactory factory, FacesContext facesContext) {
         this.factory = factory;
+        this.facesContext = facesContext;
     }
     @EJB
     public void setService(MovieService service) {
@@ -51,10 +58,18 @@ public class MovieEdit implements Serializable {
         }
     }
 
-    public String saveAction() {
-        service.update(factory.updateMovie().apply(service.find(id).orElseThrow(), movie));
-        String viewId = FacesContext.getCurrentInstance().getViewRoot().getViewId();
-        return viewId + "?faces-redirect=true&includeViewParams=true";
+    public String saveAction() throws IOException {
+        try {
+            service.update(factory.updateMovie().apply(service.findForCallerPrincipal(id).orElseThrow(), movie));
+            String viewId = FacesContext.getCurrentInstance().getViewRoot().getViewId();
+            return viewId + "?faces-redirect=true&includeViewParams=true";
+        } catch (EJBException ex) {
+            if (ex.getCause() instanceof OptimisticLockException) {
+                init();
+                facesContext.addMessage(null, new FacesMessage("Version collision."));
+            }
+            return null ;
+        }
     }
 
 }

@@ -6,6 +6,7 @@ import pg.eti.jee.movie.model.MovieEditModel;
 import pg.eti.jee.user.entity.User;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.function.BiFunction;
 
 public class UpdateMovieWithModelFunction implements BiFunction<Movie, MovieEditModel, Movie>, Serializable {
@@ -19,6 +20,9 @@ public class UpdateMovieWithModelFunction implements BiFunction<Movie, MovieEdit
                 .runningTime(request.getRunningTime())
                 .releaseDate(request.getReleaseDate())
                 .director(entity.getDirector())
+                .version(request.getVersion())
+                .creationDateTime(entity.getCreationDateTime())
+                .updateDateTime(entity.getUpdateDateTime())
                 .user(User.builder()
                         .id(request.getUser().getId())
                         .build())

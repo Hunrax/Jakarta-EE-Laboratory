@@ -6,6 +6,7 @@ import jakarta.ejb.EJBAccessException;
 import jakarta.ejb.EJBException;
 import jakarta.inject.Inject;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.transaction.TransactionalException;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.Context;
 import jakarta.ws.rs.core.Response;
@@ -18,6 +19,7 @@ import pg.eti.jee.movie.dto.GetMoviesResponse;
 import pg.eti.jee.movie.dto.PatchMovieRequest;
 import pg.eti.jee.movie.dto.PutMovieRequest;
 import pg.eti.jee.movie.service.MovieService;
+import jakarta.persistence.OptimisticLockException;
 
 import pg.eti.jee.user.entity.UserRoles;
 
@@ -109,8 +111,11 @@ public class MovieRestController implements MovieController {
                     } catch (EJBAccessException ex) {
                         log.log(Level.WARNING, ex.getMessage(), ex);
                         throw new ForbiddenException(ex.getMessage());
-                    }
-                },
+                    } catch (EJBException ex) {
+                        if (ex.getCause() instanceof OptimisticLockException) {
+                            throw new BadRequestException(ex.getCause());
+                        }
+                    }},
                 () -> {
                     throw new NotFoundException();
                 }

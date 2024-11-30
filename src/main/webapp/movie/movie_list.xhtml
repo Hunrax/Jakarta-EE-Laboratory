@@ -19,6 +19,25 @@
                 </h:column>
 
                 <h:column>
+                    <f:facet name="header">#{msg.version}</f:facet>
+                    <h:outputText value="#{movie.version}"/>
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">#{msg.created}</f:facet>
+                    <h:outputText value="#{movie.creationDateTime}">
+                        <f:convertDateTime type="localDateTime" pattern="yyyy-MM-dd HH:mm"/>
+                    </h:outputText>
+                </h:column>
+
+                <h:column>
+                    <f:facet name="header">#{msg.updated}</f:facet>
+                    <h:outputText value="#{movie.updateDateTime}">
+                        <f:convertDateTime type="localDateTime" pattern="yyyy-MM-dd HH:mm"/>
+                    </h:outputText>
+                </h:column>
+
+                <h:column>
                     <f:facet name="header">#{msg.view}</f:facet>
                     <h:link outcome="/movie/movie_view.xhtml" value="#{msg.view}" styleClass="btn btn-primary">
                         <f:param name="id" value="#{movie.id}"/>

@@ -4,8 +4,12 @@ import jakarta.enterprise.context.Dependent;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.NoResultException;
 import jakarta.persistence.PersistenceContext;
+import jakarta.persistence.criteria.CriteriaBuilder;
+import jakarta.persistence.criteria.CriteriaQuery;
+import jakarta.persistence.criteria.Root;
 import pg.eti.jee.director.entity.Director;
 import pg.eti.jee.movie.entity.Movie;
+import pg.eti.jee.movie.entity.Movie_;
 import pg.eti.jee.movie.repository.api.MovieRepository;
 import pg.eti.jee.user.entity.User;
 
@@ -30,7 +34,11 @@ public class MoviePersistanceRepository implements MovieRepository {
 
     @Override
     public List<Movie> findAll() {
-        return em.createQuery("select m from Movie m", Movie.class).getResultList();
+        CriteriaBuilder cb = em.getCriteriaBuilder();
+        CriteriaQuery<Movie> query = cb.createQuery(Movie.class);
+        Root<Movie> root = query.from(Movie.class);
+        query.select(root);
+        return em.createQuery(query).getResultList();
     }
 
     @Override
@@ -60,10 +68,15 @@ public class MoviePersistanceRepository implements MovieRepository {
     @Override
     public Optional<Movie> findByIdAndUser(UUID id, User user) {
         try {
-            return Optional.of(em.createQuery("select m from Movie m where m.id = :id and m.user = :user", Movie.class)
-                    .setParameter("user", user)
-                    .setParameter("id", id)
-                    .getSingleResult());
+            CriteriaBuilder cb = em.getCriteriaBuilder();
+            CriteriaQuery<Movie> query = cb.createQuery(Movie.class);
+            Root<Movie> root = query.from(Movie.class);
+            query.select(root)
+                    .where(cb.and(
+                            cb.equal(root.get(Movie_.user), user),
+                            cb.equal(root.get(Movie_.id), id)
+                    ));
+            return Optional.of(em.createQuery(query).getSingleResult());
         } catch (NoResultException ex) {
             return Optional.empty();
         }

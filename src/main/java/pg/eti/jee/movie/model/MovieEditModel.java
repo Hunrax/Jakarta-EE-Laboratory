@@ -28,4 +28,6 @@ public class MovieEditModel {
     private LocalDate releaseDate;
 
     private UserModel user;
+
+    private Long version;
 }

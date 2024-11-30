@@ -44,4 +44,6 @@ public class GetMovieResponse {
     private Director director;
 
     private LocalDate releaseDate;
+
+    private Long version;
 }

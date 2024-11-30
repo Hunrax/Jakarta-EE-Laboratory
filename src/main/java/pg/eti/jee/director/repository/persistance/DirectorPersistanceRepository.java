@@ -3,8 +3,12 @@ package pg.eti.jee.director.repository.persistance;
 import jakarta.enterprise.context.Dependent;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+import jakarta.persistence.criteria.CriteriaBuilder;
+import jakarta.persistence.criteria.CriteriaQuery;
+import jakarta.persistence.criteria.Root;
 import pg.eti.jee.director.entity.Director;
 import pg.eti.jee.director.repository.api.DirectorRepository;
+import pg.eti.jee.movie.entity.Movie;
 
 import java.util.List;
 import java.util.Optional;
@@ -26,7 +30,11 @@ public class DirectorPersistanceRepository implements DirectorRepository {
 
     @Override
     public List<Director> findAll() {
-        return em.createQuery("select d from Director d", Director.class).getResultList();
+        CriteriaBuilder cb = em.getCriteriaBuilder();
+        CriteriaQuery<Director> query = cb.createQuery(Director.class);
+        Root<Director> root = query.from(Director.class);
+        query.select(root);
+        return em.createQuery(query).getResultList();
     }
 
     @Override

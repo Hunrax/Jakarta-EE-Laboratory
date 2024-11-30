@@ -14,6 +14,7 @@ public class MovieToResponseFunction implements Function<Movie, GetMovieResponse
                 .title(entity.getTitle())
                 .releaseDate(entity.getReleaseDate())
                 .runningTime(entity.getRunningTime())
+                .version(entity.getVersion())
                 .director(GetMovieResponse.Director.builder()
                         .id(entity.getDirector().getId())
                         .name(entity.getDirector().getName())

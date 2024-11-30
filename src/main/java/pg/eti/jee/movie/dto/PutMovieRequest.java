@@ -30,4 +30,6 @@ public class PutMovieRequest {
     private UUID directorId;
 
     private LocalDate releaseDate;
+
+    private Long version;
 }

@@ -6,21 +6,27 @@
   <component name="ChangeListManager">
     <list default="true" id="c1062867-b09b-4876-8660-9ebbca59023f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/director/view/DirectorView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/director/view/DirectorView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/model/MovieCreateModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/model/MovieCreateModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/model/MovieModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/model/MovieModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/model/function/MovieToModelFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/model/function/MovieToModelFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pg/eti/jee/authentication/view/i18n/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pg/eti/jee/authentication/view/i18n/messages_en.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pg/eti/jee/authentication/view/i18n/messages_pl.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pg/eti/jee/authentication/view/i18n/messages_pl.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/pg/eti/jee/home/view/i18n/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pg/eti/jee/home/view/i18n/messages_en.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/director/repository/persistance/DirectorPersistanceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/director/repository/persistance/DirectorPersistanceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/controller/rest/MovieRestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/controller/rest/MovieRestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/dto/GetMovieResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/dto/GetMovieResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/dto/PatchMovieRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/dto/PatchMovieRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/dto/PutMovieRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/dto/PutMovieRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/dto/function/MovieToResponseFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/dto/function/MovieToResponseFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/dto/function/UpdateMovieWithRequestFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/dto/function/UpdateMovieWithRequestFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/entity/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/entity/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/model/MovieEditModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/model/MovieEditModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/model/MoviesModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/model/MoviesModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/model/function/MovieToEditModelFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/model/function/MovieToEditModelFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/model/function/MoviesToModelFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/model/function/MoviesToModelFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/model/function/UpdateMovieWithModelFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/model/function/UpdateMovieWithModelFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/repository/persistance/MoviePersistanceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/repository/persistance/MoviePersistanceRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/view/MovieEdit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/movie/view/MovieEdit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pg/eti/jee/user/repository/persistance/UserPersistanceRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pg/eti/jee/user/repository/persistance/UserPersistanceRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/pg/eti/jee/movies/view/i18n/messages_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pg/eti/jee/movies/view/i18n/messages_en.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/pg/eti/jee/movies/view/i18n/messages_pl.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pg/eti/jee/movies/view/i18n/messages_pl.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/faces-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/template/main.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/template/main.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/authentication/custom/login_error.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/authentication/custom/login_error.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/director/director_list.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/director/director_list.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/movie/movie_view.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/movie/movie_view.xhtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/resources/default/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/resources/default/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/movie/movie_edit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/movie/movie_edit.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/movie/movie_list.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/movie/movie_list.xhtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +82,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Radek/Desktop/Jakarta-EE-Laboratory/src/main/resources/pg/eti/jee/directors/view/i18n&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Radek/Desktop/Jakarta-EE-Laboratory/src/main/java/pg/eti/jee&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -87,11 +93,11 @@
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Radek\Desktop\Jakarta-EE-Laboratory\src\main\java\pg\eti\jee" />
       <recent name="C:\Users\Radek\Desktop\Jakarta-EE-Laboratory\src\main\resources\pg\eti\jee\directors\view\i18n" />
       <recent name="C:\Users\Radek\Desktop\Jakarta-EE-Laboratory\src\main\resources\pg\eti\jee\users\view\i18n" />
       <recent name="C:\Users\Radek\Desktop\Jakarta-EE-Laboratory\src\main\resources\pg\eti\jee\movies\view\i18n" />
       <recent name="C:\Users\Radek\Desktop\Jakarta-EE-Laboratory\src\main\resources\pg\eti\jee\home\view\i18n" />
-      <recent name="C:\Users\Radek\Desktop\Jakarta-EE-Laboratory\src\main\resources\pg\eti\jee\configuration" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Radek\Desktop\Jakarta-EE-Laboratory\src\main\webapp\resources\pl\default" />
@@ -151,6 +157,10 @@
       <workItem from="1732364640838" duration="5590000" />
       <workItem from="1732371276580" duration="1710000" />
       <workItem from="1732381575756" duration="3397000" />
+      <workItem from="1732550253740" duration="1078000" />
+      <workItem from="1732613707304" duration="139000" />
+      <workItem from="1732902657586" duration="4978000" />
+      <workItem from="1732970803044" duration="6891000" />
     </task>
     <servers />
   </component>

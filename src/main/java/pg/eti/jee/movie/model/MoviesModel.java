@@ -11,6 +11,7 @@ import lombok.Singular;
 import lombok.ToString;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.UUID;
 
@@ -36,6 +37,11 @@ public class MoviesModel implements Serializable{
 
         private String title;
 
+        private Long version;
+
+        private LocalDateTime creationDateTime;
+
+        private LocalDateTime updateDateTime;
     }
 
     @Singular

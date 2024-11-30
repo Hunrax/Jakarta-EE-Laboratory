@@ -10,6 +10,7 @@ import lombok.Setter;
 import lombok.ToString;
 import lombok.experimental.SuperBuilder;
 import pg.eti.jee.director.entity.Director;
+import pg.eti.jee.entity.VersionAndCreationDateAuditable;
 import pg.eti.jee.user.entity.User;
 
 import java.io.Serializable;
@@ -22,10 +23,10 @@ import java.util.UUID;
 @NoArgsConstructor
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @ToString(callSuper = true)
-@EqualsAndHashCode()
+@EqualsAndHashCode(callSuper = true)
 @Entity
 @Table(name = "movies")
-public class Movie implements Serializable {
+public class Movie extends VersionAndCreationDateAuditable implements Serializable {
     @Id
     private UUID id;
 
@@ -42,4 +43,16 @@ public class Movie implements Serializable {
     @ManyToOne
     @JoinColumn(name = "user_name")
     private User user;
+
+    @PrePersist
+    @Override
+    public void setStartingDateTimes() {
+        super.setStartingDateTimes();
+    }
+
+    @PreUpdate
+    @Override
+    public void updateUpdateDateTime() {
+        super.updateUpdateDateTime();
+    }
 }

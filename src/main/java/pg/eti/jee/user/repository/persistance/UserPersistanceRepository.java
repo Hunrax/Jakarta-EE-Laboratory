@@ -4,7 +4,14 @@ import jakarta.enterprise.context.Dependent;
 import jakarta.persistence.PersistenceContext;
 import jakarta.persistence.NoResultException;
 import jakarta.persistence.EntityManager;
+import jakarta.persistence.criteria.CriteriaBuilder;
+import jakarta.persistence.criteria.CriteriaQuery;
+import jakarta.persistence.criteria.Root;
+import pg.eti.jee.director.entity.Director;
+import pg.eti.jee.movie.entity.Movie;
+import pg.eti.jee.movie.entity.Movie_;
 import pg.eti.jee.user.entity.User;
+import pg.eti.jee.user.entity.User_;
 import pg.eti.jee.user.repository.api.UserRepository;
 
 import java.util.List;
@@ -27,7 +34,11 @@ public class UserPersistanceRepository implements UserRepository {
 
     @Override
     public List<User> findAll() {
-        return em.createQuery("select u from User u", User.class).getResultList();
+        CriteriaBuilder cb = em.getCriteriaBuilder();
+        CriteriaQuery<User> query = cb.createQuery(User.class);
+        Root<User> root = query.from(User.class);
+        query.select(root);
+        return em.createQuery(query).getResultList();
     }
 
     @Override
@@ -46,9 +57,14 @@ public class UserPersistanceRepository implements UserRepository {
     @Override
     public Optional<User> findByLogin(String login) {
         try {
-            return Optional.of(em.createQuery("select u from User u where u.login = :login", User.class)
-                    .setParameter("login", login)
-                    .getSingleResult());
+            CriteriaBuilder cb = em.getCriteriaBuilder();
+            CriteriaQuery<User> query = cb.createQuery(User.class);
+            Root<User> root = query.from(User.class);
+            query.select(root)
+                    .where(cb.and(
+                            cb.equal(root.get(User_.login), login)
+                    ));
+            return Optional.of(em.createQuery(query).getSingleResult());
         } catch (NoResultException ex) {
             return Optional.empty();
         }
