@@ -65,10 +65,10 @@ public class MovieEdit implements Serializable {
             return viewId + "?faces-redirect=true&includeViewParams=true";
         } catch (EJBException ex) {
             if (ex.getCause() instanceof OptimisticLockException) {
-                init();
+                //init();
                 facesContext.addMessage(null, new FacesMessage("Version collision."));
             }
-            return null ;
+            return null;
         }
     }
 
