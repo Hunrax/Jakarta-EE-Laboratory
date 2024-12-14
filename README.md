@@ -42,6 +42,6 @@ The application will run on the default Open Liberty server and can be accessed 
    - View, add, edit and delete movies added by yourself.
    - View, add, edit and delete any movie (admin only).
 
-Available in two language versions: Polish and English
+Available in two language versions: Polish and English.
 
 ![image](https://github.com/user-attachments/assets/5845a3ca-e641-4348-b780-acbac2a57335)
